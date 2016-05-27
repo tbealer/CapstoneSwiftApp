@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		708F5BE41CF8A187006A9B24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708F5BE31CF8A187006A9B24 /* AppDelegate.swift */; };
+		708F5BE61CF8A187006A9B24 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 708F5BE51CF8A187006A9B24 /* GameScene.sks */; };
+		708F5BE81CF8A187006A9B24 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708F5BE71CF8A187006A9B24 /* GameScene.swift */; };
+		708F5BEA1CF8A187006A9B24 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708F5BE91CF8A187006A9B24 /* GameViewController.swift */; };
+		708F5BED1CF8A187006A9B24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 708F5BEB1CF8A187006A9B24 /* Main.storyboard */; };
+		708F5BEF1CF8A187006A9B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 708F5BEE1CF8A187006A9B24 /* Assets.xcassets */; };
+		708F5BF21CF8A187006A9B24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 708F5BF01CF8A187006A9B24 /* LaunchScreen.storyboard */; };
+		708F5BFD1CF8A187006A9B24 /* SharkCoveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708F5BFC1CF8A187006A9B24 /* SharkCoveTests.swift */; };
+		708F5C081CF8A187006A9B24 /* SharkCoveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708F5C071CF8A187006A9B24 /* SharkCoveUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		708F5BF91CF8A187006A9B24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 708F5BD81CF8A186006A9B24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 708F5BDF1CF8A187006A9B24;
+			remoteInfo = SharkCove;
+		};
+		708F5C041CF8A187006A9B24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 708F5BD81CF8A186006A9B24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 708F5BDF1CF8A187006A9B24;
+			remoteInfo = SharkCove;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		708F5BE01CF8A187006A9B24 /* SharkCove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharkCove.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		708F5BE31CF8A187006A9B24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		708F5BE51CF8A187006A9B24 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		708F5BE71CF8A187006A9B24 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		708F5BE91CF8A187006A9B24 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		708F5BEC1CF8A187006A9B24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		708F5BEE1CF8A187006A9B24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		708F5BF11CF8A187006A9B24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		708F5BF31CF8A187006A9B24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		708F5BF81CF8A187006A9B24 /* SharkCoveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharkCoveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		708F5BFC1CF8A187006A9B24 /* SharkCoveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharkCoveTests.swift; sourceTree = "<group>"; };
+		708F5BFE1CF8A187006A9B24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		708F5C031CF8A187006A9B24 /* SharkCoveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharkCoveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		708F5C071CF8A187006A9B24 /* SharkCoveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharkCoveUITests.swift; sourceTree = "<group>"; };
+		708F5C091CF8A187006A9B24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		708F5BDD1CF8A187006A9B24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		708F5BF51CF8A187006A9B24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		708F5C001CF8A187006A9B24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		708F5BD71CF8A186006A9B24 = {
+			isa = PBXGroup;
+			children = (
+				708F5BE21CF8A187006A9B24 /* SharkCove */,
+				708F5BFB1CF8A187006A9B24 /* SharkCoveTests */,
+				708F5C061CF8A187006A9B24 /* SharkCoveUITests */,
+				708F5BE11CF8A187006A9B24 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		708F5BE11CF8A187006A9B24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				708F5BE01CF8A187006A9B24 /* SharkCove.app */,
+				708F5BF81CF8A187006A9B24 /* SharkCoveTests.xctest */,
+				708F5C031CF8A187006A9B24 /* SharkCoveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		708F5BE21CF8A187006A9B24 /* SharkCove */ = {
+			isa = PBXGroup;
+			children = (
+				708F5BE31CF8A187006A9B24 /* AppDelegate.swift */,
+				708F5BE51CF8A187006A9B24 /* GameScene.sks */,
+				708F5BE71CF8A187006A9B24 /* GameScene.swift */,
+				708F5BE91CF8A187006A9B24 /* GameViewController.swift */,
+				708F5BEB1CF8A187006A9B24 /* Main.storyboard */,
+				708F5BEE1CF8A187006A9B24 /* Assets.xcassets */,
+				708F5BF01CF8A187006A9B24 /* LaunchScreen.storyboard */,
+				708F5BF31CF8A187006A9B24 /* Info.plist */,
+			);
+			path = SharkCove;
+			sourceTree = "<group>";
+		};
+		708F5BFB1CF8A187006A9B24 /* SharkCoveTests */ = {
+			isa = PBXGroup;
+			children = (
+				708F5BFC1CF8A187006A9B24 /* SharkCoveTests.swift */,
+				708F5BFE1CF8A187006A9B24 /* Info.plist */,
+			);
+			path = SharkCoveTests;
+			sourceTree = "<group>";
+		};
+		708F5C061CF8A187006A9B24 /* SharkCoveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				708F5C071CF8A187006A9B24 /* SharkCoveUITests.swift */,
+				708F5C091CF8A187006A9B24 /* Info.plist */,
+			);
+			path = SharkCoveUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		708F5BDF1CF8A187006A9B24 /* SharkCove */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 708F5C0C1CF8A187006A9B24 /* Build configuration list for PBXNativeTarget "SharkCove" */;
+			buildPhases = (
+				708F5BDC1CF8A187006A9B24 /* Sources */,
+				708F5BDD1CF8A187006A9B24 /* Frameworks */,
+				708F5BDE1CF8A187006A9B24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SharkCove;
+			productName = SharkCove;
+			productReference = 708F5BE01CF8A187006A9B24 /* SharkCove.app */;
+			productType = "com.apple.product-type.application";
+		};
+		708F5BF71CF8A187006A9B24 /* SharkCoveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 708F5C0F1CF8A187006A9B24 /* Build configuration list for PBXNativeTarget "SharkCoveTests" */;
+			buildPhases = (
+				708F5BF41CF8A187006A9B24 /* Sources */,
+				708F5BF51CF8A187006A9B24 /* Frameworks */,
+				708F5BF61CF8A187006A9B24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				708F5BFA1CF8A187006A9B24 /* PBXTargetDependency */,
+			);
+			name = SharkCoveTests;
+			productName = SharkCoveTests;
+			productReference = 708F5BF81CF8A187006A9B24 /* SharkCoveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		708F5C021CF8A187006A9B24 /* SharkCoveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 708F5C121CF8A187006A9B24 /* Build configuration list for PBXNativeTarget "SharkCoveUITests" */;
+			buildPhases = (
+				708F5BFF1CF8A187006A9B24 /* Sources */,
+				708F5C001CF8A187006A9B24 /* Frameworks */,
+				708F5C011CF8A187006A9B24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				708F5C051CF8A187006A9B24 /* PBXTargetDependency */,
+			);
+			name = SharkCoveUITests;
+			productName = SharkCoveUITests;
+			productReference = 708F5C031CF8A187006A9B24 /* SharkCoveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		708F5BD81CF8A186006A9B24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Bealer Media";
+				TargetAttributes = {
+					708F5BDF1CF8A187006A9B24 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					708F5BF71CF8A187006A9B24 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 708F5BDF1CF8A187006A9B24;
+					};
+					708F5C021CF8A187006A9B24 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 708F5BDF1CF8A187006A9B24;
+					};
+				};
+			};
+			buildConfigurationList = 708F5BDB1CF8A186006A9B24 /* Build configuration list for PBXProject "SharkCove" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 708F5BD71CF8A186006A9B24;
+			productRefGroup = 708F5BE11CF8A187006A9B24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				708F5BDF1CF8A187006A9B24 /* SharkCove */,
+				708F5BF71CF8A187006A9B24 /* SharkCoveTests */,
+				708F5C021CF8A187006A9B24 /* SharkCoveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		708F5BDE1CF8A187006A9B24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				708F5BE61CF8A187006A9B24 /* GameScene.sks in Resources */,
+				708F5BF21CF8A187006A9B24 /* LaunchScreen.storyboard in Resources */,
+				708F5BEF1CF8A187006A9B24 /* Assets.xcassets in Resources */,
+				708F5BED1CF8A187006A9B24 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		708F5BF61CF8A187006A9B24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		708F5C011CF8A187006A9B24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		708F5BDC1CF8A187006A9B24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				708F5BE81CF8A187006A9B24 /* GameScene.swift in Sources */,
+				708F5BEA1CF8A187006A9B24 /* GameViewController.swift in Sources */,
+				708F5BE41CF8A187006A9B24 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		708F5BF41CF8A187006A9B24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				708F5BFD1CF8A187006A9B24 /* SharkCoveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		708F5BFF1CF8A187006A9B24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				708F5C081CF8A187006A9B24 /* SharkCoveUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		708F5BFA1CF8A187006A9B24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 708F5BDF1CF8A187006A9B24 /* SharkCove */;
+			targetProxy = 708F5BF91CF8A187006A9B24 /* PBXContainerItemProxy */;
+		};
+		708F5C051CF8A187006A9B24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 708F5BDF1CF8A187006A9B24 /* SharkCove */;
+			targetProxy = 708F5C041CF8A187006A9B24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		708F5BEB1CF8A187006A9B24 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				708F5BEC1CF8A187006A9B24 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		708F5BF01CF8A187006A9B24 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				708F5BF11CF8A187006A9B24 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		708F5C0A1CF8A187006A9B24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		708F5C0B1CF8A187006A9B24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		708F5C0D1CF8A187006A9B24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SharkCove/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BealerMedia.SharkCove;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		708F5C0E1CF8A187006A9B24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SharkCove/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BealerMedia.SharkCove;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		708F5C101CF8A187006A9B24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = SharkCoveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BealerMedia.SharkCoveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SharkCove.app/SharkCove";
+			};
+			name = Debug;
+		};
+		708F5C111CF8A187006A9B24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SharkCoveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BealerMedia.SharkCoveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SharkCove.app/SharkCove";
+			};
+			name = Release;
+		};
+		708F5C131CF8A187006A9B24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = SharkCoveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BealerMedia.SharkCoveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SharkCove;
+			};
+			name = Debug;
+		};
+		708F5C141CF8A187006A9B24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SharkCoveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BealerMedia.SharkCoveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SharkCove;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		708F5BDB1CF8A186006A9B24 /* Build configuration list for PBXProject "SharkCove" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				708F5C0A1CF8A187006A9B24 /* Debug */,
+				708F5C0B1CF8A187006A9B24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		708F5C0C1CF8A187006A9B24 /* Build configuration list for PBXNativeTarget "SharkCove" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				708F5C0D1CF8A187006A9B24 /* Debug */,
+				708F5C0E1CF8A187006A9B24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		708F5C0F1CF8A187006A9B24 /* Build configuration list for PBXNativeTarget "SharkCoveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				708F5C101CF8A187006A9B24 /* Debug */,
+				708F5C111CF8A187006A9B24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		708F5C121CF8A187006A9B24 /* Build configuration list for PBXNativeTarget "SharkCoveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				708F5C131CF8A187006A9B24 /* Debug */,
+				708F5C141CF8A187006A9B24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 708F5BD81CF8A186006A9B24 /* Project object */;
+}
