@@ -9,23 +9,15 @@
 import CoreMotion
 import SpriteKit
 
-enum CollisionTypes: UInt32 {
-    case Player = 1
-    case Shark = 2
-    case Wall = 4
-    case Treasure = 8
-    case Bomb = 16
-    case Mask = 17
-    case Shield = 32
-}
 
-class GameScene: SKScene, SKPhysicsContactDelegate {
+
+class GameScene2: SKScene, SKPhysicsContactDelegate {
     
     var player: SKSpriteNode!
     var shield: SKSpriteNode!
     var bomb: SKSpriteNode!
     var mask: SKSpriteNode!
-
+    
     var lastTouchPosition: CGPoint?
     
     var motionManager: CMMotionManager!
@@ -46,13 +38,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-//    var treasureLabel: SKLabelNode!
-//    
-//    var treasure: Int = 0 {
-//        didSet {
-//            treasureLabel.text = "treasure: \(treasure)"
-//        }
-//    }
+    //    var treasureLabel: SKLabelNode!
+    //
+    //    var treasure: Int = 0 {
+    //        didSet {
+    //            treasureLabel.text = "treasure: \(treasure)"
+    //        }
+    //    }
     
     
     var mask1: Int = 0
@@ -92,11 +84,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         sharkLabel.position = CGPoint(x: 200, y: 630)
         addChild(sharkLabel)
         
-//        treasureLabel = SKLabelNode(fontNamed: "Chalkduster")
-//        treasureLabel.text = "Treasure: 0"
-//        treasureLabel.horizontalAlignmentMode = .Left
-//        treasureLabel.position = CGPoint(x: 375, y: 630)
-//        addChild(treasureLabel)
+        //        treasureLabel = SKLabelNode(fontNamed: "Chalkduster")
+        //        treasureLabel.text = "Treasure: 0"
+        //        treasureLabel.horizontalAlignmentMode = .Left
+        //        treasureLabel.position = CGPoint(x: 375, y: 630)
+        //        addChild(treasureLabel)
         
         
         motionManager = CMMotionManager()
@@ -104,13 +96,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func loadLevel() {
-        if let levelPath = NSBundle.mainBundle().pathForResource("level1", ofType: "txt") {
+        if let levelPath = NSBundle.mainBundle().pathForResource("level2", ofType: "txt") {
             if let levelString = try? String(contentsOfFile: levelPath, usedEncoding: nil) {
                 let lines = levelString.componentsSeparatedByString("\n")
                 
                 for (row, line) in lines.reverse().enumerate() {
                     for (column, letter) in line.characters.enumerate() {
-                        let position = CGPoint(x: (51 * column) + 25, y: (55 * row) + 85)
+                        let position = CGPoint(x: (51 * column) + 25, y: (55 * row) + 120)
                         
                         if letter == "s" {
                             // load wall
@@ -138,7 +130,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                             node.name = "wall"
                             node.alpha = 0.3
                             node.hidden = true
-
+                            
                             node.position = position
                             node.physicsBody = SKPhysicsBody(rectangleOfSize: node.size)
                             node.physicsBody!.categoryBitMask = CollisionTypes.Wall.rawValue
@@ -151,7 +143,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                             node.name = "mask"
                             node.physicsBody = SKPhysicsBody(rectangleOfSize: node.size)
                             node.physicsBody!.dynamic = false
-//                            node.alpha = 0.5
+                            //                            node.alpha = 0.5
                             node.hidden = true
                             
                             let bubbles = SKSpriteNode(imageNamed: "bubbles")
@@ -171,7 +163,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                             node.name = "bomb"
                             node.physicsBody = SKPhysicsBody(rectangleOfSize: node.size)
                             node.physicsBody!.dynamic = false
-//                            node.alpha = 0.5
+                            //                            node.alpha = 0.5
                             node.hidden = true
                             
                             let bubbles = SKSpriteNode(imageNamed: "bubbles")
@@ -205,7 +197,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
         }
-    
+        
     }
     
     
@@ -213,7 +205,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         player = SKSpriteNode(imageNamed: "swimmerfinal")
-        player.position = CGPoint(x: 96, y: 300)
+        player.position = CGPoint(x: 80, y: 500)
         player.anchorPoint = CGPoint(x:0.5,y:0.5)
         
         player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width / 2)
@@ -233,7 +225,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         shield = SKSpriteNode(imageNamed: "block")
         shield.alpha = 0.5
         shield.hidden = true
-
         shield.position = CGPointMake(player.position.x / 30, player.position.y / 30)
         shield.physicsBody = SKPhysicsBody(circleOfRadius: shield.size.width * 1.5
         )
@@ -248,11 +239,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let joint = SKPhysicsJointFixed.jointWithBodyA(player.physicsBody!, bodyB: shield.physicsBody!, anchor: CGPointMake(CGRectGetMidX(player.frame) / 2, CGRectGetMidY(player.frame) / 2 ))
         
         physicsWorld.addJoint(joint)
-            
-    
+        
+        
     }
     
-
+    
     
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -292,7 +283,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-
+    
     func didBeginContact(contact: SKPhysicsContact) {
         if contact.bodyA.node == player {
             playerCollidedWithNode(contact.bodyB.node!)
@@ -310,40 +301,40 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func shieldCollidedWithNode(node: SKNode) {
         
         if (mask1 == 1) {
-        
-        if node.name == "wall" {
-            wall += 1
-            node.hidden = false
             
-        } else if node.name == "treasure" {
-//            treasure += 1
-            node.hidden = false
-        } else if node.name == "shark" {
-            shark += 1
-            node.hidden = false
-        } else if node.name == "bomb" {
-//            treasure += 1
-            node.hidden = false
-        } else if node.name == "mask" {
-//            treasure += 1
-            node.hidden = false
-        }
-        
+            if node.name == "wall" {
+                wall += 1
+                node.hidden = false
+                
+            } else if node.name == "treasure" {
+                //            treasure += 1
+                node.hidden = false
+            } else if node.name == "shark" {
+                shark += 1
+                node.hidden = false
+            } else if node.name == "bomb" {
+                //            treasure += 1
+                node.hidden = false
+            } else if node.name == "mask" {
+                //            treasure += 1
+                node.hidden = false
+            }
+            
         } else {
             if node.name == "wall" {
                 wall += 1
                 
             } else if node.name == "treasure" {
-//                treasure += 1
+                //                treasure += 1
             } else if node.name == "shark" {
                 shark += 1
             } else if node.name == "bomb" {
-//                treasure += 1
+                //                treasure += 1
             } else if node.name == "mask" {
-//                treasure += 1
+                //                treasure += 1
             }
         }
-    
+        
     }
     
     func didEndContact(contact: SKPhysicsContact) {
@@ -363,16 +354,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 node.hidden = true
                 
             } else if node.name == "treasure" {
-//                treasure -= 1
+                //                treasure -= 1
                 node.hidden = true
             } else if node.name == "shark" {
                 shark -= 1
                 node.hidden = true
             } else if node.name == "bomb" {
-//                treasure -= 1
+                //                treasure -= 1
                 node.hidden = true
             } else if node.name == "mask" {
-//                treasure -= 1
+                //                treasure -= 1
                 node.hidden = true
             }
             
@@ -381,13 +372,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 wall -= 1
                 
             } else if node.name == "treasure" {
-//                treasure -= 1
+                //                treasure -= 1
             } else if node.name == "shark" {
                 shark -= 1
             } else if node.name == "bomb" {
-//                treasure -= 1
+                //                treasure -= 1
             } else if node.name == "mask" {
-//                treasure -= 1
+                //                treasure -= 1
             }
         }
         
@@ -399,13 +390,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if node.name == "shark" {
             
             if (bomb1 == 1) {
-           
-            node.removeFromParent()
                 
-            
-            
-        } else {
-            
+                node.removeFromParent()
+                
+                
+                
+            } else {
+                
                 player.physicsBody!.dynamic = false
                 gameOver = true
                 
@@ -416,17 +407,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 player.runAction(sequence) { [unowned self] in
                     self.shark = 0
                     self.wall = 0
-//                    self.treasure = 0
+                    //                    self.treasure = 0
                     
                     self.makeJoint()
                     self.gameOver = false
                     
                 }
-            
-            
+                
+                
             }
-        
-    } else if node.name == "treasure" {
+            
+        } else if node.name == "treasure" {
             player.physicsBody!.dynamic = false
             gameOver = true
             
@@ -439,7 +430,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             player.runAction(sequence) { [unowned self] in
                 self.shark = 0
                 self.wall = 0
-//                self.treasure = 0
+                //                self.treasure = 0
                 
                 self.makeJoint()
                 self.gameOver = true
@@ -454,7 +445,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
         } else if node.name == "bomb" {
-
+            
             
             self.bomb1 += 1
             
@@ -468,10 +459,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.view?.window?.rootViewController?.dismissViewControllerAnimated( true, completion: nil)
             })
             
-
-
-
-        
+            
+            
+            
+            
             // next level?
         } else if node.name == "mask" {
             

@@ -1,0 +1,64 @@
+for powerup mask{
+
+        set anchor point for sprite in the middle of the body.
+        create another node that sits on top of the sprite at that point.
+        sprite will create visibility of sharks in a circle radius of 2x the sprite.
+            this will happen by changing the hidden bool of the shark and powerups.
+}
+
+
+
+for powerup sharkbomb{
+
+will use removefrom scene.
+might flash an explosion or something.
+
+
+}
+
+
+
+when changing between scenes, you're going to need to set up a transition, how the scene will change to the next and define which scene you want to transition to.
+
+For the transition,
+
+var transition:SKTransition = SKTransition.fadeWithDuration(1)
+The fadeWithDurationcan be replaced with any SKTransition a list of which can be found in the documentation https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SKTransition_Ref/index.html
+
+as for defining the scene,
+
+var scene:SKScene = GameScene(size: self.size)
+You're stating which scene you wish to transition to, in this case GameScene, but should be replaced with whichever scene you wish to transition to.
+
+In order to start the transition, call:
+
+self.view?.presentScene(scene, transition: transition)
+Which will move to the scene scene which was set up in the line prior, using the transition transition which was also defined.
+
+
+
+FOR SCALING PURPOSES
+sprite.xscale
+
+sprite.yscale
+
+
+struct ScreenSize
+{
+static let SCREEN_WIDTH = UIScreen.mainScreen().bounds.size.width
+static let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.size.height
+static let SCREEN_MAX_LENGTH = max(ScreenSize.SCREEN_WIDTH, ScreenSize.SCREEN_HEIGHT)
+static let SCREEN_MIN_LENGTH = min(ScreenSize.SCREEN_WIDTH, ScreenSize.SCREEN_HEIGHT)
+}
+
+struct DeviceType
+{
+static let IS_IPHONE_4_OR_LESS =  UIDevice.currentDevice().userInterfaceIdiom == .Phone && ScreenSize.SCREEN_MAX_LENGTH < 568.0
+static let IS_IPHONE_5 = UIDevice.currentDevice().userInterfaceIdiom == .Phone && ScreenSize.SCREEN_MAX_LENGTH == 568.0
+static let IS_IPHONE_6 = UIDevice.currentDevice().userInterfaceIdiom == .Phone && ScreenSize.SCREEN_MAX_LENGTH == 667.0
+static let IS_IPHONE_6P = UIDevice.currentDevice().userInterfaceIdiom == .Phone && ScreenSize.SCREEN_MAX_LENGTH == 736.0
+}
+
+
+
+
