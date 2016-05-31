@@ -17,6 +17,7 @@
 		706B44291CFCB60700798986 /* GameScene2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B44281CFCB60700798986 /* GameScene2.swift */; };
 		707194E81CFDF2180023F61B /* treasure.png in Resources */ = {isa = PBXBuildFile; fileRef = 707194E71CFDF2180023F61B /* treasure.png */; };
 		707BCB701CFE2B9E00CC55BE /* bubbles.png in Resources */ = {isa = PBXBuildFile; fileRef = 707BCB6F1CFE2B9E00CC55BE /* bubbles.png */; };
+		707BCB721CFE446A00CC55BE /* bloodfinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 707BCB711CFE446A00CC55BE /* bloodfinal.png */; };
 		708F5BE41CF8A187006A9B24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708F5BE31CF8A187006A9B24 /* AppDelegate.swift */; };
 		708F5BE61CF8A187006A9B24 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 708F5BE51CF8A187006A9B24 /* GameScene.sks */; };
 		708F5BE81CF8A187006A9B24 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708F5BE71CF8A187006A9B24 /* GameScene.swift */; };
@@ -72,6 +73,7 @@
 		706B44281CFCB60700798986 /* GameScene2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene2.swift; sourceTree = "<group>"; };
 		707194E71CFDF2180023F61B /* treasure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treasure.png; sourceTree = "<group>"; };
 		707BCB6F1CFE2B9E00CC55BE /* bubbles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbles.png; sourceTree = "<group>"; };
+		707BCB711CFE446A00CC55BE /* bloodfinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bloodfinal.png; sourceTree = "<group>"; };
 		708F5BE01CF8A187006A9B24 /* SharkCove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharkCove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		708F5BE31CF8A187006A9B24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		708F5BE51CF8A187006A9B24 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				708F5C1B1CF8A23E006A9B24 /* finish.png */,
 				708F5C1C1CF8A23E006A9B24 /* finish@2x.png */,
 				708F5C1D1CF8A23E006A9B24 /* level1.txt */,
+				707BCB711CFE446A00CC55BE /* bloodfinal.png */,
 				707BCB6F1CFE2B9E00CC55BE /* bubbles.png */,
 				706B44261CFCB40E00798986 /* level2.txt */,
 				708F5C1E1CF8A23E006A9B24 /* player.png */,
@@ -318,6 +321,7 @@
 				703CFE4D1CFCAF6B0012ACB8 /* swimmerfinal.png in Resources */,
 				708F5C371CF8A31F006A9B24 /* rsz_mask-sprite-final.png in Resources */,
 				703CFE4B1CFCAEC50012ACB8 /* coral.png in Resources */,
+				707BCB721CFE446A00CC55BE /* bloodfinal.png in Resources */,
 				708F5C2C1CF8A23E006A9B24 /* player@2x.png in Resources */,
 				708F5C301CF8A23E006A9B24 /* vortex@2x.png in Resources */,
 				703CFE431CFC9ADB0012ACB8 /* water-sprite-final.png in Resources */,

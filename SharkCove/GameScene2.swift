@@ -273,7 +273,7 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
             #if (arch(i386) || arch(x86_64))
                 if let currentTouch = lastTouchPosition {
                     let diff = CGPoint(x: currentTouch.x - player.position.x, y: currentTouch.y - player.position.y)
-                    physicsWorld.gravity = CGVector(dx: diff.x / 50, dy: diff.y / 50)
+                    physicsWorld.gravity = CGVector(dx: diff.x / 150, dy: diff.y / 150)
                 }
             #else
                 if let accelerometerData = motionManager.accelerometerData {
@@ -390,7 +390,14 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
         if node.name == "shark" {
             
             if (bomb1 == 1) {
+                let blood = SKSpriteNode(imageNamed: "bloodfinal")
+                blood.position = node.position
+                blood.name = "blood"
+                blood.alpha = 0.5
                 
+                
+                
+                addChild(blood)
                 node.removeFromParent()
                 
                 
@@ -454,7 +461,7 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
             let alert = UIAlertController(title: "You Picked Up a Shark Bomb!", message: "No shark can harm you now", preferredStyle: UIAlertControllerStyle.ActionSheet)
             
             self.view?.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
-            let triggerTime = (Int64(NSEC_PER_SEC) * 3)
+            let triggerTime = (Int64(NSEC_PER_SEC) * 2)
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
                 self.view?.window?.rootViewController?.dismissViewControllerAnimated( true, completion: nil)
             })
@@ -473,7 +480,7 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
             let alert = UIAlertController(title: "You Picked Up a Mask!", message: "Now obstacles within a small radius are visible", preferredStyle: UIAlertControllerStyle.ActionSheet)
             
             self.view?.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
-            let triggerTime = (Int64(NSEC_PER_SEC) * 3)
+            let triggerTime = (Int64(NSEC_PER_SEC) * 2)
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
                 self.view?.window?.rootViewController?.dismissViewControllerAnimated( true, completion: nil)
             })
