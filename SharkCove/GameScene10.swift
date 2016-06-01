@@ -227,7 +227,7 @@ class GameScene10: SKScene, SKPhysicsContactDelegate {
         
         
         player = SKSpriteNode(imageNamed: "swimmerfinal")
-        player.position = CGPoint(x: 70, y: 500)
+        player.position = CGPoint(x: 30, y: 450)
         player.anchorPoint = CGPoint(x:0.5,y:0.5)
         
         player.userInteractionEnabled = false
