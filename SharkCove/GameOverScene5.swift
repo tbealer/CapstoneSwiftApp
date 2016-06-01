@@ -1,5 +1,5 @@
 //
-//  SuccessScene3.swift
+//  GameOverScene5.swift
 //  SharkCove
 //
 //  Created by Thomas Bealer on 6/1/16.
@@ -9,7 +9,7 @@
 import CoreMotion
 import SpriteKit
 
-class SuccessScene3: SKScene, SKPhysicsContactDelegate {
+class GameOverScene5: SKScene, SKPhysicsContactDelegate {
     
     var playbutton: SKSpriteNode!
     var lastTouchPosition: CGPoint?
@@ -77,7 +77,7 @@ class SuccessScene3: SKScene, SKPhysicsContactDelegate {
     }
     
     func addButtons () {
-        let win = SKSpriteNode(imageNamed: "successfinal")
+        let win = SKSpriteNode(imageNamed: "gameoverfinal")
         win.name = "win"
         win.position = CGPoint(x: 500, y: 400)
         win.zPosition = 20
@@ -93,7 +93,7 @@ class SuccessScene3: SKScene, SKPhysicsContactDelegate {
         
         addChild(homebtn)
         
-        let nextbtn = SKSpriteNode(imageNamed: "nextfinal")
+        let nextbtn = SKSpriteNode(imageNamed: "retryfinal")
         nextbtn.name = "nextbtn"
         nextbtn.zPosition = 21
         nextbtn.userInteractionEnabled = false
@@ -122,7 +122,7 @@ class SuccessScene3: SKScene, SKPhysicsContactDelegate {
                     
                     let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 1.0)
                     
-                    let nextScene = GameScene4(size: self.scene!.size)
+                    let nextScene = GameScene5(size: self.scene!.size)
                     nextScene.scaleMode = SKSceneScaleMode.AspectFill
                     
                     self.scene!.view!.presentScene(nextScene, transition: transition)

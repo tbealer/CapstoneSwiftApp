@@ -1,5 +1,5 @@
 //
-//  SuccessScene3.swift
+//  SuccessScene5.swift
 //  SharkCove
 //
 //  Created by Thomas Bealer on 6/1/16.
@@ -9,7 +9,7 @@
 import CoreMotion
 import SpriteKit
 
-class SuccessScene3: SKScene, SKPhysicsContactDelegate {
+class SuccessScene5: SKScene, SKPhysicsContactDelegate {
     
     var playbutton: SKSpriteNode!
     var lastTouchPosition: CGPoint?
@@ -122,7 +122,7 @@ class SuccessScene3: SKScene, SKPhysicsContactDelegate {
                     
                     let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 1.0)
                     
-                    let nextScene = GameScene4(size: self.scene!.size)
+                    let nextScene = GameScene6(size: self.scene!.size)
                     nextScene.scaleMode = SKSceneScaleMode.AspectFill
                     
                     self.scene!.view!.presentScene(nextScene, transition: transition)

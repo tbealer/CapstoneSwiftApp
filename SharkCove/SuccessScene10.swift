@@ -1,5 +1,5 @@
 //
-//  SuccessScene3.swift
+//  SuccessScene10.swift
 //  SharkCove
 //
 //  Created by Thomas Bealer on 6/1/16.
@@ -9,7 +9,7 @@
 import CoreMotion
 import SpriteKit
 
-class SuccessScene3: SKScene, SKPhysicsContactDelegate {
+class SuccessScene10: SKScene, SKPhysicsContactDelegate {
     
     var playbutton: SKSpriteNode!
     var lastTouchPosition: CGPoint?
@@ -77,7 +77,7 @@ class SuccessScene3: SKScene, SKPhysicsContactDelegate {
     }
     
     func addButtons () {
-        let win = SKSpriteNode(imageNamed: "successfinal")
+        let win = SKSpriteNode(imageNamed: "gameoverfinal")
         win.name = "win"
         win.position = CGPoint(x: 500, y: 400)
         win.zPosition = 20
@@ -93,15 +93,8 @@ class SuccessScene3: SKScene, SKPhysicsContactDelegate {
         
         addChild(homebtn)
         
-        let nextbtn = SKSpriteNode(imageNamed: "nextfinal")
-        nextbtn.name = "nextbtn"
-        nextbtn.zPosition = 21
-        nextbtn.userInteractionEnabled = false
-        
-        nextbtn.position = CGPoint(x: 500, y: 300)
         
         
-        addChild(nextbtn)
         
     }
     
@@ -117,19 +110,7 @@ class SuccessScene3: SKScene, SKPhysicsContactDelegate {
             
             if let name = touchedNode.name
             {
-                if name == "nextbtn"
-                {
-                    
-                    let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 1.0)
-                    
-                    let nextScene = GameScene4(size: self.scene!.size)
-                    nextScene.scaleMode = SKSceneScaleMode.AspectFill
-                    
-                    self.scene!.view!.presentScene(nextScene, transition: transition)
-                    
-                }
-                    
-                else if name == "homebtn"
+              if name == "homebtn"
                 {
                     
                     let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 1.0)
