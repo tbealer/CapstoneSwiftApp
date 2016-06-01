@@ -10,16 +10,17 @@
 import UIKit
 import SpriteKit
 
+
+
 class GameViewController: UIViewController {
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.sharedApplication().idleTimerDisabled = true
+         
         if let scene = GameScene(fileNamed:"GameScene") {
             // Configure the view.
-            
             let skView = self.view as! SKView
-            
             skView.showsFPS = false
             skView.showsNodeCount = false
             
@@ -33,6 +34,8 @@ class GameViewController: UIViewController {
         }
     }
     
+
+
     override func shouldAutorotate() -> Bool {
         return true
     }
