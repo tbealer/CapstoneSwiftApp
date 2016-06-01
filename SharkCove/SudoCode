@@ -37,28 +37,12 @@ Which will move to the scene scene which was set up in the line prior, using the
 
 
 
-FOR SCALING PURPOSES
-sprite.xscale
+for instructions use just a background image and transition between those two.
 
-sprite.yscale
+Also add bubbles to the treasure as well. Makes it less likely someone will just stumble over it for no reason and be confused as to what happened.
 
+could make shark you kill worth a certain number of points. Also connect bomb to shield and set bomb to explode when UITouch is activated on the swimmer node. That way you can kill more than one at a time. This will allow users to rack up points to buy powerups. Also can buy powerups using cash.
 
-struct ScreenSize
-{
-static let SCREEN_WIDTH = UIScreen.mainScreen().bounds.size.width
-static let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.size.height
-static let SCREEN_MAX_LENGTH = max(ScreenSize.SCREEN_WIDTH, ScreenSize.SCREEN_HEIGHT)
-static let SCREEN_MIN_LENGTH = min(ScreenSize.SCREEN_WIDTH, ScreenSize.SCREEN_HEIGHT)
-}
-
-struct DeviceType
-{
-static let IS_IPHONE_4_OR_LESS =  UIDevice.currentDevice().userInterfaceIdiom == .Phone && ScreenSize.SCREEN_MAX_LENGTH < 568.0
-static let IS_IPHONE_5 = UIDevice.currentDevice().userInterfaceIdiom == .Phone && ScreenSize.SCREEN_MAX_LENGTH == 568.0
-static let IS_IPHONE_6 = UIDevice.currentDevice().userInterfaceIdiom == .Phone && ScreenSize.SCREEN_MAX_LENGTH == 667.0
-static let IS_IPHONE_6P = UIDevice.currentDevice().userInterfaceIdiom == .Phone && ScreenSize.SCREEN_MAX_LENGTH == 736.0
-}
-
-
+will have to rethink map to make it harder to find goggles. Or have multiple goggles around and somehow get them to work on a timer.
 
 

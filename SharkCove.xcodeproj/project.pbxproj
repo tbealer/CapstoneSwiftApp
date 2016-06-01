@@ -43,6 +43,7 @@
 		708F5C371CF8A31F006A9B24 /* rsz_mask-sprite-final.png in Resources */ = {isa = PBXBuildFile; fileRef = 708F5C331CF8A31F006A9B24 /* rsz_mask-sprite-final.png */; };
 		708F5C381CF8A31F006A9B24 /* rsz_1water-sprite-final.png in Resources */ = {isa = PBXBuildFile; fileRef = 708F5C341CF8A31F006A9B24 /* rsz_1water-sprite-final.png */; };
 		708F5C3C1CF8ED54006A9B24 /* SudoCode in Resources */ = {isa = PBXBuildFile; fileRef = 708F5C3B1CF8ED54006A9B24 /* SudoCode */; };
+		70EA70C51CFF47AC007193C7 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA70C41CFF47AC007193C7 /* MainMenuScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		708F5C331CF8A31F006A9B24 /* rsz_mask-sprite-final.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rsz_mask-sprite-final.png"; sourceTree = "<group>"; };
 		708F5C341CF8A31F006A9B24 /* rsz_1water-sprite-final.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rsz_1water-sprite-final.png"; sourceTree = "<group>"; };
 		708F5C3B1CF8ED54006A9B24 /* SudoCode */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SudoCode; sourceTree = "<group>"; };
+		70EA70C41CFF47AC007193C7 /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				708F5BF31CF8A187006A9B24 /* Info.plist */,
 				708F5C3B1CF8ED54006A9B24 /* SudoCode */,
 				706B44281CFCB60700798986 /* GameScene2.swift */,
+				70EA70C41CFF47AC007193C7 /* MainMenuScene.swift */,
 			);
 			path = SharkCove;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70EA70C51CFF47AC007193C7 /* MainMenuScene.swift in Sources */,
 				708F5BE81CF8A187006A9B24 /* GameScene.swift in Sources */,
 				706B44291CFCB60700798986 /* GameScene2.swift in Sources */,
 				708F5BEA1CF8A187006A9B24 /* GameViewController.swift in Sources */,
