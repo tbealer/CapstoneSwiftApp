@@ -17,6 +17,20 @@
 		7063F5B01CFF5818003870A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7063F5AF1CFF5818003870A2 /* Main.storyboard */; };
 		7063F5B61CFF5A5D003870A2 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7063F5B51CFF5A5D003870A2 /* GameScene.sks */; };
 		7063F5B81CFF5A6B003870A2 /* GameScene1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7063F5B71CFF5A6B003870A2 /* GameScene1.sks */; };
+		7063F5BA1CFF71E1003870A2 /* successfinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7063F5B91CFF71E1003870A2 /* successfinal.png */; };
+		7063F5BC1CFF71EB003870A2 /* gameoverfinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7063F5BB1CFF71EB003870A2 /* gameoverfinal.png */; };
+		7063F5BE1CFF71FD003870A2 /* nextfinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7063F5BD1CFF71FD003870A2 /* nextfinal.png */; };
+		7063F5C01CFF7222003870A2 /* homebtnfinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7063F5BF1CFF7222003870A2 /* homebtnfinal.png */; };
+		7063F5C21CFF7BEC003870A2 /* SuccessScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F5C11CFF7BEC003870A2 /* SuccessScene.swift */; };
+		7063F5C41CFF7D2A003870A2 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F5C31CFF7D2A003870A2 /* GameOverScene.swift */; };
+		7063F5C61CFF7ECD003870A2 /* retryfinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7063F5C51CFF7ECD003870A2 /* retryfinal.png */; };
+		7063F5C91CFF80D6003870A2 /* GameOverScene2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F5C81CFF80D6003870A2 /* GameOverScene2.swift */; };
+		7063F5CB1CFF8157003870A2 /* SuccessScene2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F5CA1CFF8157003870A2 /* SuccessScene2.swift */; };
+		7063F5CD1CFF8345003870A2 /* level3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7063F5CC1CFF8345003870A2 /* level3.txt */; };
+		7063F5CF1CFF8474003870A2 /* GameScene3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F5CE1CFF8474003870A2 /* GameScene3.swift */; };
+		7063F5D11CFF8485003870A2 /* GameOverScene3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F5D01CFF8485003870A2 /* GameOverScene3.swift */; };
+		7063F5D31CFF8493003870A2 /* SuccessScene3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F5D21CFF8493003870A2 /* SuccessScene3.swift */; };
+		7063F5D51CFF85D5003870A2 /* level4.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7063F5D41CFF85D5003870A2 /* level4.txt */; };
 		706B44271CFCB40E00798986 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 706B44261CFCB40E00798986 /* level2.txt */; };
 		706B44291CFCB60700798986 /* GameScene2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B44281CFCB60700798986 /* GameScene2.swift */; };
 		707194E81CFDF2180023F61B /* treasure.png in Resources */ = {isa = PBXBuildFile; fileRef = 707194E71CFDF2180023F61B /* treasure.png */; };
@@ -48,6 +62,7 @@
 		70EA70C51CFF47AC007193C7 /* GameScene1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA70C41CFF47AC007193C7 /* GameScene1.swift */; };
 		70EA70C71CFF4979007193C7 /* mainMenu.txt in Resources */ = {isa = PBXBuildFile; fileRef = 70EA70C61CFF4979007193C7 /* mainMenu.txt */; };
 		70EA70C91CFF4BC7007193C7 /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 70EA70C81CFF4BC7007193C7 /* playbutton.png */; };
+		70EEEFBB1CFF899500D25704 /* level5.txt in Resources */ = {isa = PBXBuildFile; fileRef = 70EEEFBA1CFF899500D25704 /* level5.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +93,20 @@
 		7063F5AF1CFF5818003870A2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7063F5B51CFF5A5D003870A2 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		7063F5B71CFF5A6B003870A2 /* GameScene1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene1.sks; sourceTree = "<group>"; };
+		7063F5B91CFF71E1003870A2 /* successfinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = successfinal.png; sourceTree = "<group>"; };
+		7063F5BB1CFF71EB003870A2 /* gameoverfinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameoverfinal.png; sourceTree = "<group>"; };
+		7063F5BD1CFF71FD003870A2 /* nextfinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextfinal.png; sourceTree = "<group>"; };
+		7063F5BF1CFF7222003870A2 /* homebtnfinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homebtnfinal.png; sourceTree = "<group>"; };
+		7063F5C11CFF7BEC003870A2 /* SuccessScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessScene.swift; sourceTree = "<group>"; };
+		7063F5C31CFF7D2A003870A2 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		7063F5C51CFF7ECD003870A2 /* retryfinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retryfinal.png; sourceTree = "<group>"; };
+		7063F5C81CFF80D6003870A2 /* GameOverScene2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene2.swift; sourceTree = "<group>"; };
+		7063F5CA1CFF8157003870A2 /* SuccessScene2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessScene2.swift; sourceTree = "<group>"; };
+		7063F5CC1CFF8345003870A2 /* level3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level3.txt; sourceTree = "<group>"; };
+		7063F5CE1CFF8474003870A2 /* GameScene3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene3.swift; sourceTree = "<group>"; };
+		7063F5D01CFF8485003870A2 /* GameOverScene3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene3.swift; sourceTree = "<group>"; };
+		7063F5D21CFF8493003870A2 /* SuccessScene3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessScene3.swift; sourceTree = "<group>"; };
+		7063F5D41CFF85D5003870A2 /* level4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level4.txt; sourceTree = "<group>"; };
 		706B44261CFCB40E00798986 /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
 		706B44281CFCB60700798986 /* GameScene2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene2.swift; sourceTree = "<group>"; };
 		707194E71CFDF2180023F61B /* treasure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treasure.png; sourceTree = "<group>"; };
@@ -115,6 +144,7 @@
 		70EA70C41CFF47AC007193C7 /* GameScene1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene1.swift; sourceTree = "<group>"; };
 		70EA70C61CFF4979007193C7 /* mainMenu.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mainMenu.txt; sourceTree = "<group>"; };
 		70EA70C81CFF4BC7007193C7 /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
+		70EEEFBA1CFF899500D25704 /* level5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level5.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,8 +195,8 @@
 		708F5BE21CF8A187006A9B24 /* SharkCove */ = {
 			isa = PBXGroup;
 			children = (
-				708F5BE31CF8A187006A9B24 /* AppDelegate.swift */,
 				708F5BE71CF8A187006A9B24 /* GameScene.swift */,
+				708F5BE31CF8A187006A9B24 /* AppDelegate.swift */,
 				708F5BE91CF8A187006A9B24 /* GameViewController.swift */,
 				7063F5AD1CFF5810003870A2 /* LaunchScreen.storyboard */,
 				7063F5AF1CFF5818003870A2 /* Main.storyboard */,
@@ -188,7 +218,11 @@
 				708F5C1D1CF8A23E006A9B24 /* level1.txt */,
 				707BCB711CFE446A00CC55BE /* bloodfinal.png */,
 				707BCB6F1CFE2B9E00CC55BE /* bubbles.png */,
+				7063F5BF1CFF7222003870A2 /* homebtnfinal.png */,
+				7063F5BD1CFF71FD003870A2 /* nextfinal.png */,
+				7063F5BB1CFF71EB003870A2 /* gameoverfinal.png */,
 				706B44261CFCB40E00798986 /* level2.txt */,
+				7063F5B91CFF71E1003870A2 /* successfinal.png */,
 				708F5C1E1CF8A23E006A9B24 /* player.png */,
 				707194E71CFDF2180023F61B /* treasure.png */,
 				708F5C1F1CF8A23E006A9B24 /* player@2x.png */,
@@ -204,7 +238,18 @@
 				70EA70C41CFF47AC007193C7 /* GameScene1.swift */,
 				70EA70C61CFF4979007193C7 /* mainMenu.txt */,
 				7063F5B51CFF5A5D003870A2 /* GameScene.sks */,
+				7063F5C51CFF7ECD003870A2 /* retryfinal.png */,
 				7063F5B71CFF5A6B003870A2 /* GameScene1.sks */,
+				7063F5C11CFF7BEC003870A2 /* SuccessScene.swift */,
+				7063F5C31CFF7D2A003870A2 /* GameOverScene.swift */,
+				7063F5C81CFF80D6003870A2 /* GameOverScene2.swift */,
+				7063F5CA1CFF8157003870A2 /* SuccessScene2.swift */,
+				7063F5CC1CFF8345003870A2 /* level3.txt */,
+				7063F5CE1CFF8474003870A2 /* GameScene3.swift */,
+				7063F5D01CFF8485003870A2 /* GameOverScene3.swift */,
+				7063F5D21CFF8493003870A2 /* SuccessScene3.swift */,
+				7063F5D41CFF85D5003870A2 /* level4.txt */,
+				70EEEFBA1CFF899500D25704 /* level5.txt */,
 			);
 			path = SharkCove;
 			sourceTree = "<group>";
@@ -331,8 +376,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7063F5BE1CFF71FD003870A2 /* nextfinal.png in Resources */,
+				7063F5BC1CFF71EB003870A2 /* gameoverfinal.png in Resources */,
+				7063F5C01CFF7222003870A2 /* homebtnfinal.png in Resources */,
 				703CFE461CFCA2740012ACB8 /* background1.png in Resources */,
 				703CFE4D1CFCAF6B0012ACB8 /* swimmerfinal.png in Resources */,
+				70EEEFBB1CFF899500D25704 /* level5.txt in Resources */,
 				708F5C371CF8A31F006A9B24 /* rsz_mask-sprite-final.png in Resources */,
 				703CFE4B1CFCAEC50012ACB8 /* coral.png in Resources */,
 				707BCB721CFE446A00CC55BE /* bloodfinal.png in Resources */,
@@ -346,12 +395,15 @@
 				708F5C2B1CF8A23E006A9B24 /* player.png in Resources */,
 				70EA70C71CFF4979007193C7 /* mainMenu.txt in Resources */,
 				7063F5B81CFF5A6B003870A2 /* GameScene1.sks in Resources */,
+				7063F5BA1CFF71E1003870A2 /* successfinal.png in Resources */,
 				708F5C271CF8A23E006A9B24 /* block@2x.png in Resources */,
 				708F5C281CF8A23E006A9B24 /* finish.png in Resources */,
 				708F5BF21CF8A187006A9B24 /* LaunchScreen.storyboard in Resources */,
 				708F5BEF1CF8A187006A9B24 /* Assets.xcassets in Resources */,
 				7063F5AE1CFF5810003870A2 /* LaunchScreen.storyboard in Resources */,
+				7063F5C61CFF7ECD003870A2 /* retryfinal.png in Resources */,
 				707BCB701CFE2B9E00CC55BE /* bubbles.png in Resources */,
+				7063F5D51CFF85D5003870A2 /* level4.txt in Resources */,
 				70EA70C91CFF4BC7007193C7 /* playbutton.png in Resources */,
 				708F5C361CF8A31F006A9B24 /* rsz_bomb-sprite-final.png in Resources */,
 				703CFE471CFCA2740012ACB8 /* background2.png in Resources */,
@@ -361,6 +413,7 @@
 				708F5C2D1CF8A23E006A9B24 /* star.png in Resources */,
 				708F5C3C1CF8ED54006A9B24 /* SudoCode in Resources */,
 				708F5C2A1CF8A23E006A9B24 /* level1.txt in Resources */,
+				7063F5CD1CFF8345003870A2 /* level3.txt in Resources */,
 				708F5C291CF8A23E006A9B24 /* finish@2x.png in Resources */,
 				703CFE491CFCADD30012ACB8 /* gameshark.png in Resources */,
 				707194E81CFDF2180023F61B /* treasure.png in Resources */,
@@ -389,10 +442,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7063F5C21CFF7BEC003870A2 /* SuccessScene.swift in Sources */,
 				70EA70C51CFF47AC007193C7 /* GameScene1.swift in Sources */,
+				7063F5C41CFF7D2A003870A2 /* GameOverScene.swift in Sources */,
 				708F5BE81CF8A187006A9B24 /* GameScene.swift in Sources */,
+				7063F5CB1CFF8157003870A2 /* SuccessScene2.swift in Sources */,
 				706B44291CFCB60700798986 /* GameScene2.swift in Sources */,
+				7063F5C91CFF80D6003870A2 /* GameOverScene2.swift in Sources */,
 				708F5BEA1CF8A187006A9B24 /* GameViewController.swift in Sources */,
+				7063F5D31CFF8493003870A2 /* SuccessScene3.swift in Sources */,
+				7063F5CF1CFF8474003870A2 /* GameScene3.swift in Sources */,
+				7063F5D11CFF8485003870A2 /* GameOverScene3.swift in Sources */,
 				708F5BE41CF8A187006A9B24 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

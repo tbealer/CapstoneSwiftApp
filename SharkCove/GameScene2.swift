@@ -17,6 +17,8 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
     var shield: SKSpriteNode!
     var bomb: SKSpriteNode!
     var mask: SKSpriteNode!
+    var nextbtn: SKSpriteNode!
+    var homebtn: SKSpriteNode!
     
     var lastTouchPosition: CGPoint?
     
@@ -115,7 +117,7 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
                 
                 for (row, line) in lines.reverse().enumerate() {
                     for (column, letter) in line.characters.enumerate() {
-                        let position = CGPoint(x: (51 * column) + 25, y: (55 * row) + 120)
+                        let position = CGPoint(x: (51 * column) + 25, y: (55 * row) + 130)
                         
                         if letter == "s" {
                             // load wall
@@ -270,15 +272,15 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
     
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if let touch = touches.first {
+        for touch: AnyObject in touches {
             let location = touch.locationInNode(self)
             lastTouchPosition = location
             
-            if(player.containsPoint(location))
+            if(player.containsPoint(location) && (bomb1 > 0))
             {
-                if(bomb1 > 0){
-                    bombFunc()
-                }
+                
+                bombFunc()
+                
                 let alert = UIAlertController(title: "Bomb is activated!", message: "The next Shark you touch is toast!!", preferredStyle: UIAlertControllerStyle.ActionSheet)
                 
                 self.view?.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
@@ -287,7 +289,6 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
                     self.view?.window?.rootViewController?.dismissViewControllerAnimated( true, completion: nil)
                 })
             }
-            
             
         }
     }
@@ -469,13 +470,20 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
                     self.makeJoint()
                     self.gameOver = false
                     
+                    let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 0)
+                    
+                    let nextScene = GameOverScene2(size: self.scene!.size)
+                    nextScene.scaleMode = SKSceneScaleMode.AspectFill
+                    
+                    self.scene!.view!.presentScene(nextScene, transition: transition)
+                    
                 }
                 
                 
             }
             
         } else if node.name == "treasure" {
-            player.physicsBody!.dynamic = false
+            //            player.physicsBody!.dynamic = false
             gameOver = true
             
             node.hidden = false
@@ -487,21 +495,25 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
             let remove = SKAction.removeFromParent()
             let sequence = SKAction.sequence([move, scale, remove])
             
+            
+            
             player.runAction(sequence) { [unowned self] in
+                
                 self.shark = 0
                 self.wall = 0
                 //                self.treasure = 0
+                
+                let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 0)
+                
+                let nextScene = SuccessScene2(size: self.scene!.size)
+                nextScene.scaleMode = SKSceneScaleMode.AspectFill
+                
+                self.scene!.view!.presentScene(nextScene, transition: transition)
                 
                 
                 self.makeJoint()
                 self.gameOver = true
                 
-                let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 1.0)
-                
-                let nextScene = GameScene2(size: self.scene!.size)
-                nextScene.scaleMode = SKSceneScaleMode.AspectFill
-                
-                self.scene!.view!.presentScene(nextScene, transition: transition)
                 
             }
             
