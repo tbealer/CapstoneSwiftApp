@@ -1,5 +1,5 @@
 //
-//  SuccessScene9.swift
+//  LevelMenuScene.swift
 //  SharkCove
 //
 //  Created by Thomas Bealer on 6/1/16.
@@ -11,8 +11,14 @@ import SpriteKit
 
 class LevelMenuScene: SKScene, SKPhysicsContactDelegate {
     
-    var playbutton: SKSpriteNode!
+    var homebutton: SKSpriteNode!
     var lastTouchPosition: CGPoint?
+    var level1: SKSpriteNode!
+    var level2: SKSpriteNode!
+    var level3: SKSpriteNode!
+    var level4: SKSpriteNode!
+    var level5: SKSpriteNode!
+    var morelevels:SKSpriteNode!
     
     
     
@@ -77,31 +83,70 @@ class LevelMenuScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func addButtons () {
-        let win = SKSpriteNode(imageNamed: "successfinal")
-        win.name = "win"
-        win.position = CGPoint(x: 500, y: 400)
-        win.zPosition = 20
+        level1 = SKSpriteNode(imageNamed: "star")
+//        level1.text = "Level 1"
+//        level1.fontSize = 20
+        level1.name = "level1"
+        level1.zPosition = 1
+        level1.position = CGPoint(x: 400, y: 500)
         
-        addChild(win)
+        addChild(level1)
         
-        let homebtn = SKSpriteNode(imageNamed: "homebtnfinal")
-        homebtn.name = "homebtn"
-        homebtn.zPosition = 21
-        homebtn.userInteractionEnabled = false
+        level2 = SKSpriteNode(imageNamed: "star")
+//        level2.text = "Level 2"
+//        level2.fontSize = 20
+        level2.name = "level2"
+        level2.zPosition = 1
+        level2.position = CGPoint(x: 400, y: 400)
+
         
-        homebtn.position = CGPoint(x: 500, y: 400)
+        addChild(level2)
         
-        addChild(homebtn)
+        level3 = SKSpriteNode(imageNamed: "star")
+//        level3.text = "Level 3"
+//        level3.fontSize = 20
+        level3.name = "level3"
+        level3.zPosition = 1
+        level3.position = CGPoint(x: 400, y: 300)
+
         
-        let nextbtn = SKSpriteNode(imageNamed: "nextfinal")
-        nextbtn.name = "nextbtn"
-        nextbtn.zPosition = 21
-        nextbtn.userInteractionEnabled = false
+        addChild(level3)
         
-        nextbtn.position = CGPoint(x: 500, y: 300)
+        level4 = SKSpriteNode(imageNamed: "star")
+//        level4.text = "Level 4"
+//        level4.fontSize = 20
+        level4.name = "level4"
+        level4.zPosition = 1
+        level4.position = CGPoint(x: 500, y: 500)
+
+        
+        addChild(level4)
+        
+        level5 = SKSpriteNode(imageNamed: "star")
+//        level5.text = "Level 5"
+//        level5.fontSize = 20
+        level5.name = "level5"
+        level5.zPosition = 1
+        level5.position = CGPoint(x: 500, y: 400)
+
+        
+        addChild(level5)
+        
+        morelevels = SKSpriteNode(imageNamed: "star")
+//        morelevels.text = "More Levels"
+//        morelevels.fontSize = 20
+        morelevels.name = "morelevels"
+        morelevels.zPosition = 1
+        morelevels.position = CGPoint(x: 500, y: 300)
         
         
-        addChild(nextbtn)
+        addChild(morelevels)
+        
+        let homebutton = SKSpriteNode(imageNamed: "homebtnfinal")
+        homebutton.name = "homebutton"
+        homebutton.zPosition = 1
+        homebutton.position = CGPoint(x: 450, y: 200)
+        addChild(homebutton)
         
     }
     
@@ -117,20 +162,75 @@ class LevelMenuScene: SKScene, SKPhysicsContactDelegate {
             
             if let name = touchedNode.name
             {
-                if name == "nextbtn"
+                if name == "level1"
                 {
                     
                     let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 1.0)
                     
-                    let nextScene = GameScene10(size: self.scene!.size)
+                    let nextScene = GameScene1(size: self.scene!.size)
                     nextScene.scaleMode = SKSceneScaleMode.AspectFill
                     
                     self.scene!.view!.presentScene(nextScene, transition: transition)
                     
                 }
                     
-                else if name == "homebtn"
+                else if name == "level2"
                 {
+                    
+                    let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 1.0)
+                    
+                    let nextScene = GameScene2(size: self.scene!.size)
+                    nextScene.scaleMode = SKSceneScaleMode.AspectFill
+                    
+                    self.scene!.view!.presentScene(nextScene, transition: transition)
+                    
+                }
+                else if name == "level3"
+                {
+                    
+                    let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 1.0)
+                    
+                    let nextScene = GameScene3(size: self.scene!.size)
+                    nextScene.scaleMode = SKSceneScaleMode.AspectFill
+                    
+                    self.scene!.view!.presentScene(nextScene, transition: transition)
+                    
+                }
+                else if name == "level4"
+                {
+                    
+                    let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 1.0)
+                    
+                    let nextScene = GameScene4(size: self.scene!.size)
+                    nextScene.scaleMode = SKSceneScaleMode.AspectFill
+                    
+                    self.scene!.view!.presentScene(nextScene, transition: transition)
+                    
+                }
+                else if name == "level5"
+                {
+                    
+                    let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 1.0)
+                    
+                    let nextScene = GameScene5(size: self.scene!.size)
+                    nextScene.scaleMode = SKSceneScaleMode.AspectFill
+                    
+                    self.scene!.view!.presentScene(nextScene, transition: transition)
+                    
+                }
+                
+                
+                else if name == "morelevels"{
+                    
+                    let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 1.0)
+                    
+                    let nextScene = LevelMenuScene2(size: self.scene!.size)
+                    nextScene.scaleMode = SKSceneScaleMode.AspectFill
+                    
+                    self.scene!.view!.presentScene(nextScene, transition: transition)
+                }
+                
+                else if name == "homebutton"{
                     
                     let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 1.0)
                     
@@ -138,7 +238,6 @@ class LevelMenuScene: SKScene, SKPhysicsContactDelegate {
                     nextScene.scaleMode = SKSceneScaleMode.AspectFill
                     
                     self.scene!.view!.presentScene(nextScene, transition: transition)
-                    
                 }
             }
         }

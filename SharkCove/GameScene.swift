@@ -15,6 +15,8 @@ import SpriteKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var playbutton: SKSpriteNode!
+    var lvlbutton: SKSpriteNode!
+
     var lastTouchPosition: CGPoint?
     
     
@@ -83,12 +85,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let playbutton = SKSpriteNode(imageNamed: "playbutton")
         playbutton.name = "playbutton"
         playbutton.zPosition = 1
-        playbutton.position = CGPoint(x: 300, y: 300)
+        playbutton.position = CGPoint(x: 400, y: 500)
         playbutton.anchorPoint = CGPoint(x:0.5,y:0.5)
         playbutton.userInteractionEnabled = false
         
         
         addChild(playbutton)
+        
+        let lvlbutton = SKSpriteNode(imageNamed: "lvlfinal")
+        lvlbutton.name = "lvlbutton"
+        lvlbutton.zPosition = 1
+        lvlbutton.position = CGPoint(x: 400, y: 300)
+        lvlbutton.anchorPoint = CGPoint(x:0.5,y:0.5)
+        lvlbutton.userInteractionEnabled = false
+        
+        
+        addChild(lvlbutton)
         
     }
     
@@ -113,6 +125,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 self.scene!.view!.presentScene(nextScene, transition: transition)
             }
+            else if name == "lvlbutton"
+            {
+                let transition = SKTransition.revealWithDirection(SKTransitionDirection.Up, duration: 2.0)
+                
+                let nextScene = LevelMenuScene(size: self.scene!.size)
+                nextScene.scaleMode = SKSceneScaleMode.AspectFill
+                
+                self.scene!.view!.presentScene(nextScene, transition: transition)
+            }
+        }
+            
         }
         }
     }
@@ -120,4 +143,3 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     
-}

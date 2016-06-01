@@ -91,6 +91,7 @@
 		70EEEFEF1CFF8E4700D25704 /* SuccessScene10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEFEE1CFF8E4700D25704 /* SuccessScene10.swift */; };
 		70EEEFF11CFF922500D25704 /* LevelMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEFF01CFF922500D25704 /* LevelMenuScene.swift */; };
 		70EEEFF31CFF923F00D25704 /* LevelMenuScene2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EEEFF21CFF923F00D25704 /* LevelMenuScene2.swift */; };
+		70EEEFF51CFF982800D25704 /* lvlfinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 70EEEFF41CFF982800D25704 /* lvlfinal.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +202,7 @@
 		70EEEFEE1CFF8E4700D25704 /* SuccessScene10.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessScene10.swift; sourceTree = "<group>"; };
 		70EEEFF01CFF922500D25704 /* LevelMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelMenuScene.swift; sourceTree = "<group>"; };
 		70EEEFF21CFF923F00D25704 /* LevelMenuScene2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelMenuScene2.swift; sourceTree = "<group>"; };
+		70EEEFF41CFF982800D25704 /* lvlfinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lvlfinal.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +282,7 @@
 				706B44261CFCB40E00798986 /* level2.txt */,
 				7063F5B91CFF71E1003870A2 /* successfinal.png */,
 				708F5C1E1CF8A23E006A9B24 /* player.png */,
+				70EEEFF41CFF982800D25704 /* lvlfinal.png */,
 				707194E71CFDF2180023F61B /* treasure.png */,
 				708F5C1F1CF8A23E006A9B24 /* player@2x.png */,
 				708F5C201CF8A23E006A9B24 /* star.png */,
@@ -499,6 +502,7 @@
 				708F5C381CF8A31F006A9B24 /* rsz_1water-sprite-final.png in Resources */,
 				708F5C351CF8A31F006A9B24 /* rsz_1rsz_shark.png in Resources */,
 				7063F5B61CFF5A5D003870A2 /* GameScene.sks in Resources */,
+				70EEEFF51CFF982800D25704 /* lvlfinal.png in Resources */,
 				708F5C2D1CF8A23E006A9B24 /* star.png in Resources */,
 				708F5C3C1CF8ED54006A9B24 /* SudoCode in Resources */,
 				708F5C2A1CF8A23E006A9B24 /* level1.txt in Resources */,
