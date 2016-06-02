@@ -119,7 +119,7 @@ class LevelMenuScene2: SKScene, SKPhysicsContactDelegate {
 //        level9.fontSize = 20
         level9.name = "level9"
         level9.zPosition = 1
-        level9.position = CGPoint(x: 500, y: 400)
+        level9.position = CGPoint(x: 500, y: 500)
         
         
         addChild(level9)
@@ -129,7 +129,7 @@ class LevelMenuScene2: SKScene, SKPhysicsContactDelegate {
 //        level10.fontSize = 20
         level10.name = "level10"
         level10.zPosition = 1
-        level10.position = CGPoint(x: 500, y: 500)
+        level10.position = CGPoint(x: 500, y: 400)
         
         
         addChild(level10)

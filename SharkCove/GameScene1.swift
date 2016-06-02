@@ -251,7 +251,7 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
         
         player.userInteractionEnabled = false
         
-        player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width / 2)
+        player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width / 3)
         player.physicsBody!.allowsRotation = false
         player.physicsBody!.linearDamping = 0.5
         
@@ -514,8 +514,7 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
             let remove = SKAction.removeFromParent()
             let sequence = SKAction.sequence([move, scale, remove])
             
-            
-            
+//
             player.runAction(sequence) { [unowned self] in
                 
                 self.shark = 0
@@ -528,10 +527,7 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
                 nextScene.scaleMode = SKSceneScaleMode.AspectFill
                 
                 self.scene!.view!.presentScene(nextScene, transition: transition)
-                
-                
-                self.makeJoint()
-                self.gameOver = true
+            
                 
                 
             }
@@ -546,7 +542,7 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
             let alert = UIAlertController(title: "You Picked Up a Shark Bomb!", message: "To activate simply tap the swimmer! The next shark you run into will be toast!", preferredStyle: UIAlertControllerStyle.ActionSheet)
             
             self.view?.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
-            let triggerTime = (Int64(NSEC_PER_SEC) * 2)
+            let triggerTime = (Int64(NSEC_PER_SEC) * 0)
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
                 self.view?.window?.rootViewController?.dismissViewControllerAnimated( true, completion: nil)
             })
@@ -565,7 +561,7 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
             let alert = UIAlertController(title: "You Picked Up a Mask!", message: "Now obstacles within a small radius are visible", preferredStyle: UIAlertControllerStyle.ActionSheet)
             
             self.view?.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
-            let triggerTime = (Int64(NSEC_PER_SEC) * 1)
+            let triggerTime = (Int64(NSEC_PER_SEC) * 0)
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
                 self.view?.window?.rootViewController?.dismissViewControllerAnimated( true, completion: nil)
             })

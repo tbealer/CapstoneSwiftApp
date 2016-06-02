@@ -227,12 +227,12 @@ class GameScene8: SKScene, SKPhysicsContactDelegate {
         
         
         player = SKSpriteNode(imageNamed: "swimmerfinal")
-        player.position = CGPoint(x: 70, y: 500)
+        player.position = CGPoint(x: 70, y: 550)
         player.anchorPoint = CGPoint(x:0.5,y:0.5)
         
         player.userInteractionEnabled = false
         
-        player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width / 2)
+        player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width / 3)
         player.physicsBody!.allowsRotation = false
         player.physicsBody!.linearDamping = 0.5
         

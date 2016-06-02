@@ -232,7 +232,7 @@ class GameScene10: SKScene, SKPhysicsContactDelegate {
         
         player.userInteractionEnabled = false
         
-        player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width / 2)
+        player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width / 3)
         player.physicsBody!.allowsRotation = false
         player.physicsBody!.linearDamping = 0.5
         

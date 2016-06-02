@@ -46,3 +46,11 @@ could make shark you kill worth a certain number of points. Also connect bomb to
 will have to rethink map to make it harder to find goggles. Or have multiple goggles around and somehow get them to work on a timer.
 
 
+make lvl 1 a training lvl.
+
+from then on when you get a bomb a bomb node is placed in the corner
+
+if more than one bomb is added. a SKnodelabel is added
+
+when a bomb is armed another node of an armed bomb pops up in the top corner
+
