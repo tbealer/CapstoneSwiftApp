@@ -137,7 +137,7 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
 //        sharkLabel.position = CGPoint(x: 200, y: 630)
 //        addChild(sharkLabel)
         
-        let bombthing = SKSpriteNode(imageNamed: "rsz_bomb-sprite-final")
+        let bombthing = SKSpriteNode(imageNamed: "therealbomb")
         bombthing.position = CGPoint(x: 475, y: 630)
         addChild(bombthing)
         
@@ -202,7 +202,7 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
                             addChild(node)
                         } else if letter == "m"  {
                             // load star
-                            let node = SKSpriteNode(imageNamed: "rsz_mask-sprite-final")
+                            let node = SKSpriteNode(imageNamed: "therealmask")
                             node.name = "mask"
                             node.physicsBody = SKPhysicsBody(rectangleOfSize: node.size)
                             node.physicsBody!.dynamic = false
@@ -222,7 +222,7 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
                             addChild(bubbles)
                         } else if letter == "b"  {
                             // load star
-                            let node = SKSpriteNode(imageNamed: "rsz_bomb-sprite-final")
+                            let node = SKSpriteNode(imageNamed: "therealbomb")
                             node.name = "bomb"
                             node.physicsBody = SKPhysicsBody(rectangleOfSize: node.size)
                             node.physicsBody!.dynamic = false
@@ -242,7 +242,7 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
                             addChild(bubbles)
                         } else if letter == "t"  {
                             // load finish
-                            let node = SKSpriteNode(imageNamed: "treasure")
+                            let node = SKSpriteNode(imageNamed: "therealtreasure")
                             node.name = "treasure"
                             node.physicsBody = SKPhysicsBody(rectangleOfSize: node.size)
                             node.physicsBody!.dynamic = false
@@ -275,7 +275,7 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
         
         if bomb2 == 1 {
         
-            let activebomb = SKSpriteNode(imageNamed: "star")
+            let activebomb = SKSpriteNode(imageNamed: "therealactivebomb")
             activebomb.position = CGPoint(x: 700, y: 630)
             addChild(activebomb)
         
@@ -412,13 +412,13 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
                 
                     bombFunc()
                 
-                let alert = UIAlertController(title: "Bomb is activated!", message: "The next Shark you touch is toast!!", preferredStyle: UIAlertControllerStyle.ActionSheet)
-                
-                self.view?.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
-                let triggerTime = (Int64(NSEC_PER_SEC) * 1)
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
-                    self.view?.window?.rootViewController?.dismissViewControllerAnimated( true, completion: nil)
-                })
+//                let alert = UIAlertController(title: "Bomb is activated!", message: "The next Shark you touch is toast!!", preferredStyle: UIAlertControllerStyle.ActionSheet)
+//                
+//                self.view?.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
+//                let triggerTime = (Int64(NSEC_PER_SEC) * 1)
+//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
+//                    self.view?.window?.rootViewController?.dismissViewControllerAnimated( true, completion: nil)
+//                })
             }
              
         }
@@ -676,13 +676,13 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
             
             node.removeFromParent()
             
-            let alert = UIAlertController(title: "You Picked Up a Shark Bomb!", message: "To activate simply tap the swimmer! The next shark you run into will be toast!", preferredStyle: UIAlertControllerStyle.ActionSheet)
-            
-            self.view?.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
-            let triggerTime = (Int64(NSEC_PER_SEC) * 0)
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
-                self.view?.window?.rootViewController?.dismissViewControllerAnimated( true, completion: nil)
-            })
+//            let alert = UIAlertController(title: "You Picked Up a Shark Bomb!", message: "To activate simply tap the swimmer! The next shark you run into will be toast!", preferredStyle: UIAlertControllerStyle.ActionSheet)
+//            
+//            self.view?.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
+//            let triggerTime = (Int64(NSEC_PER_SEC) * 0)
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
+//                self.view?.window?.rootViewController?.dismissViewControllerAnimated( true, completion: nil)
+//            })
             
             
             
@@ -695,13 +695,13 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
             
             node.removeFromParent()
             
-            let alert = UIAlertController(title: "You Picked Up a Mask!", message: "Now obstacles within a small radius are visible", preferredStyle: UIAlertControllerStyle.ActionSheet)
-            
-            self.view?.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
-            let triggerTime = (Int64(NSEC_PER_SEC) * 0)
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
-                self.view?.window?.rootViewController?.dismissViewControllerAnimated( true, completion: nil)
-            })
+//            let alert = UIAlertController(title: "You Picked Up a Mask!", message: "Now obstacles within a small radius are visible", preferredStyle: UIAlertControllerStyle.ActionSheet)
+//            
+//            self.view?.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
+//            let triggerTime = (Int64(NSEC_PER_SEC) * 0)
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
+//                self.view?.window?.rootViewController?.dismissViewControllerAnimated( true, completion: nil)
+//            })
             
             // next level?
         }

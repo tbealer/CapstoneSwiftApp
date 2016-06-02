@@ -75,7 +75,6 @@ class SuccessScene2: SKScene, SKPhysicsContactDelegate {
         }
         
     }
-    
     func addButtons () {
         let win = SKSpriteNode(imageNamed: "successfinal")
         win.name = "win"
@@ -84,16 +83,25 @@ class SuccessScene2: SKScene, SKPhysicsContactDelegate {
         
         addChild(win)
         
-        let homebtn = SKSpriteNode(imageNamed: "homebtnfinal")
+        let homebtn = SKSpriteNode(imageNamed: "therealhomebtn")
         homebtn.name = "homebtn"
         homebtn.zPosition = 21
         homebtn.userInteractionEnabled = false
         
-        homebtn.position = CGPoint(x: 500, y: 400)
+        homebtn.position = CGPoint(x: 500, y: 500)
         
         addChild(homebtn)
         
-        let nextbtn = SKSpriteNode(imageNamed: "nextfinal")
+        let lvlbtn = SKSpriteNode(imageNamed: "thereallvlbtn")
+        lvlbtn.name = "lvlbtn"
+        lvlbtn.zPosition = 21
+        lvlbtn.userInteractionEnabled = false
+        
+        lvlbtn.position = CGPoint(x: 500, y: 400)
+        
+        addChild(lvlbtn)
+        
+        let nextbtn = SKSpriteNode(imageNamed: "therealnxtbtn")
         nextbtn.name = "nextbtn"
         nextbtn.zPosition = 21
         nextbtn.userInteractionEnabled = false
@@ -135,6 +143,17 @@ class SuccessScene2: SKScene, SKPhysicsContactDelegate {
                     let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 1.0)
                     
                     let nextScene = GameScene(size: self.scene!.size)
+                    nextScene.scaleMode = SKSceneScaleMode.AspectFill
+                    
+                    self.scene!.view!.presentScene(nextScene, transition: transition)
+                    
+                }
+                else if name == "lvlbtn"
+                {
+                    
+                    let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 1.0)
+                    
+                    let nextScene = LevelMenuScene(size: self.scene!.size)
                     nextScene.scaleMode = SKSceneScaleMode.AspectFill
                     
                     self.scene!.view!.presentScene(nextScene, transition: transition)

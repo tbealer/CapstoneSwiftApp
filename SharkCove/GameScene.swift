@@ -87,20 +87,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func addButtons () {
-        let playbutton = SKSpriteNode(imageNamed: "playbutton")
+        let title = SKSpriteNode(imageNamed: "therealtitle")
+        title.name = "title"
+        title.zPosition = 1
+        title.position = CGPoint(x: 500, y: 500)
+        title.anchorPoint = CGPoint(x:0.5,y:0.5)
+        title.userInteractionEnabled = false
+        
+        
+        addChild(title)
+        
+        
+        
+        let playbutton = SKSpriteNode(imageNamed: "therealplaybtn")
         playbutton.name = "playbutton"
         playbutton.zPosition = 1
-        playbutton.position = CGPoint(x: 400, y: 500)
+        playbutton.position = CGPoint(x: 500, y: 300)
         playbutton.anchorPoint = CGPoint(x:0.5,y:0.5)
         playbutton.userInteractionEnabled = false
         
         
         addChild(playbutton)
         
-        let lvlbutton = SKSpriteNode(imageNamed: "lvlfinal")
-        lvlbutton.name = "lvlbutton"
+        let lvlbutton = SKSpriteNode(imageNamed: "therealinstructionsbtn")
+        lvlbutton.name = "instructionbtn"
         lvlbutton.zPosition = 1
-        lvlbutton.position = CGPoint(x: 400, y: 300)
+        lvlbutton.position = CGPoint(x: 500, y: 200)
         lvlbutton.anchorPoint = CGPoint(x:0.5,y:0.5)
         lvlbutton.userInteractionEnabled = false
         
@@ -125,16 +137,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             {
                 let transition = SKTransition.revealWithDirection(SKTransitionDirection.Up, duration: 2.0)
                 
-                let nextScene = GameScene1(size: self.scene!.size)
+                let nextScene = LevelMenuScene(size: self.scene!.size)
                 nextScene.scaleMode = SKSceneScaleMode.AspectFill
                 
                 self.scene!.view!.presentScene(nextScene, transition: transition)
             }
-            else if name == "lvlbutton"
+            else if name == "instructionbtn"
             {
                 let transition = SKTransition.revealWithDirection(SKTransitionDirection.Up, duration: 2.0)
                 
-                let nextScene = LevelMenuScene(size: self.scene!.size)
+                let nextScene = InstructionScene(size: self.scene!.size)
                 nextScene.scaleMode = SKSceneScaleMode.AspectFill
                 
                 self.scene!.view!.presentScene(nextScene, transition: transition)

@@ -84,21 +84,21 @@ class GameOverScene8: SKScene, SKPhysicsContactDelegate {
         
         addChild(win)
         
-        let homebtn = SKSpriteNode(imageNamed: "homebtnfinal")
+        let homebtn = SKSpriteNode(imageNamed: "therealhomebtn")
         homebtn.name = "homebtn"
         homebtn.zPosition = 21
         homebtn.userInteractionEnabled = false
         
-        homebtn.position = CGPoint(x: 500, y: 400)
+        homebtn.position = CGPoint(x: 500, y: 300)
         
         addChild(homebtn)
         
-        let nextbtn = SKSpriteNode(imageNamed: "retryfinal")
+        let nextbtn = SKSpriteNode(imageNamed: "therealretrybtn")
         nextbtn.name = "nextbtn"
         nextbtn.zPosition = 21
         nextbtn.userInteractionEnabled = false
         
-        nextbtn.position = CGPoint(x: 500, y: 300)
+        nextbtn.position = CGPoint(x: 500, y: 200)
         
         
         addChild(nextbtn)

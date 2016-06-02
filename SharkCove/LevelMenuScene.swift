@@ -90,43 +90,43 @@ class LevelMenuScene: SKScene, SKPhysicsContactDelegate {
     
     func addButtons () {
         
-        locked = SKSpriteNode(imageNamed: "vortex")
-        locked.position = CGPoint(x: 400, y: 400)
+        locked = SKSpriteNode(imageNamed: "thereallockedbtn")
+        locked.position = CGPoint(x: 300, y: 400)
         locked.zPosition = 1
         
-        locked2 = SKSpriteNode(imageNamed: "vortex")
-        locked2.position = CGPoint(x: 400, y: 300)
+        locked2 = SKSpriteNode(imageNamed: "thereallockedbtn")
+        locked2.position = CGPoint(x: 300, y: 300)
         locked2.zPosition = 1
         
-        locked3 = SKSpriteNode(imageNamed: "vortex")
-        locked3.position = CGPoint(x: 500, y: 500)
+        locked3 = SKSpriteNode(imageNamed: "thereallockedbtn")
+        locked3.position = CGPoint(x: 700, y: 500)
         locked3.zPosition = 1
         
-        locked4 = SKSpriteNode(imageNamed: "vortex")
-        locked4.position = CGPoint(x: 500, y: 400)
+        locked4 = SKSpriteNode(imageNamed: "thereallockedbtn")
+        locked4.position = CGPoint(x: 700, y: 400)
         locked4.zPosition = 1
         
-        locked5 = SKSpriteNode(imageNamed: "vortex")
-        locked5.position = CGPoint(x: 500, y: 300)
+        locked5 = SKSpriteNode(imageNamed: "thereallockedbtn")
+        locked5.position = CGPoint(x: 700, y: 300)
         locked5.zPosition = 1
         
-        level1 = SKSpriteNode(imageNamed: "star")
+        level1 = SKSpriteNode(imageNamed: "thereallvl1btn")
 //        level1.text = "Level 1"
 //        level1.fontSize = 20
         level1.name = "level1"
         level1.zPosition = 1
-        level1.position = CGPoint(x: 400, y: 500)
+        level1.position = CGPoint(x: 300, y: 500)
         
         
         
         addChild(level1)
         
-        level2 = SKSpriteNode(imageNamed: "star")
+        level2 = SKSpriteNode(imageNamed: "thereallvl2btn")
 //        level2.text = "Level 2"
 //        level2.fontSize = 20
         level2.name = "level2"
         level2.zPosition = 1
-        level2.position = CGPoint(x: 400, y: 400)
+        level2.position = CGPoint(x: 300, y: 400)
 
         func updatelvl2 () {
             
@@ -149,12 +149,12 @@ class LevelMenuScene: SKScene, SKPhysicsContactDelegate {
         
 //        addChild(level2)
         
-        level3 = SKSpriteNode(imageNamed: "star")
+        level3 = SKSpriteNode(imageNamed: "thereallvl3btn")
 //        level3.text = "Level 3"
 //        level3.fontSize = 20
         level3.name = "level3"
         level3.zPosition = 1
-        level3.position = CGPoint(x: 400, y: 300)
+        level3.position = CGPoint(x: 300, y: 300)
         
         
         func updatelvl3 () {
@@ -178,12 +178,12 @@ class LevelMenuScene: SKScene, SKPhysicsContactDelegate {
 
         
         
-        level4 = SKSpriteNode(imageNamed: "star")
+        level4 = SKSpriteNode(imageNamed: "thereallvl4btn")
 //        level4.text = "Level 4"
 //        level4.fontSize = 20
         level4.name = "level4"
         level4.zPosition = 1
-        level4.position = CGPoint(x: 500, y: 500)
+        level4.position = CGPoint(x: 700, y: 500)
         
         func updatelvl4 () {
             
@@ -206,12 +206,12 @@ class LevelMenuScene: SKScene, SKPhysicsContactDelegate {
 
         
         
-        level5 = SKSpriteNode(imageNamed: "star")
+        level5 = SKSpriteNode(imageNamed: "thereallvl5btn")
 //        level5.text = "Level 5"
 //        level5.fontSize = 20
         level5.name = "level5"
         level5.zPosition = 1
-        level5.position = CGPoint(x: 500, y: 400)
+        level5.position = CGPoint(x: 700, y: 400)
 
         func updatelvl5 () {
             
@@ -233,12 +233,12 @@ class LevelMenuScene: SKScene, SKPhysicsContactDelegate {
         updatelvl5()
         
         
-        morelevels = SKSpriteNode(imageNamed: "star")
+        morelevels = SKSpriteNode(imageNamed: "therealnxtbtn")
 //        morelevels.text = "More Levels"
 //        morelevels.fontSize = 20
         morelevels.name = "morelevels"
         morelevels.zPosition = 1
-        morelevels.position = CGPoint(x: 500, y: 300)
+        morelevels.position = CGPoint(x: 700, y: 300)
         
         func updatemorelevels () {
             
@@ -262,10 +262,10 @@ class LevelMenuScene: SKScene, SKPhysicsContactDelegate {
         
         
         
-        let homebutton = SKSpriteNode(imageNamed: "homebtnfinal")
+        let homebutton = SKSpriteNode(imageNamed: "therealhomebtn")
         homebutton.name = "homebutton"
         homebutton.zPosition = 1
-        homebutton.position = CGPoint(x: 450, y: 200)
+        homebutton.position = CGPoint(x: 500, y: 200)
         addChild(homebutton)
         
     }

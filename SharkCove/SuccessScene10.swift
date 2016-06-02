@@ -77,22 +77,30 @@ class SuccessScene10: SKScene, SKPhysicsContactDelegate {
     }
     
     func addButtons () {
-        let win = SKSpriteNode(imageNamed: "gameoverfinal")
+        let win = SKSpriteNode(imageNamed: "successfinal")
         win.name = "win"
         win.position = CGPoint(x: 500, y: 400)
         win.zPosition = 20
         
         addChild(win)
         
-        let homebtn = SKSpriteNode(imageNamed: "homebtnfinal")
+        let homebtn = SKSpriteNode(imageNamed: "therealhomebtn")
         homebtn.name = "homebtn"
         homebtn.zPosition = 21
         homebtn.userInteractionEnabled = false
         
-        homebtn.position = CGPoint(x: 500, y: 400)
+        homebtn.position = CGPoint(x: 500, y: 500)
         
         addChild(homebtn)
         
+        let lvlbtn = SKSpriteNode(imageNamed: "thereallvlbtn")
+        lvlbtn.name = "lvlbtn"
+        lvlbtn.zPosition = 21
+        lvlbtn.userInteractionEnabled = false
+        
+        lvlbtn.position = CGPoint(x: 500, y: 400)
+        
+        addChild(lvlbtn)
         
         
         
@@ -110,7 +118,7 @@ class SuccessScene10: SKScene, SKPhysicsContactDelegate {
             
             if let name = touchedNode.name
             {
-              if name == "homebtn"
+                 if name == "homebtn"
                 {
                     
                     let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 1.0)
@@ -121,10 +129,21 @@ class SuccessScene10: SKScene, SKPhysicsContactDelegate {
                     self.scene!.view!.presentScene(nextScene, transition: transition)
                     
                 }
+                else if name == "lvlbtn"
+                {
+                    
+                    let transition = SKTransition.revealWithDirection(SKTransitionDirection.Down, duration: 1.0)
+                    
+                    let nextScene = LevelMenuScene2(size: self.scene!.size)
+                    nextScene.scaleMode = SKSceneScaleMode.AspectFill
+                    
+                    self.scene!.view!.presentScene(nextScene, transition: transition)
+                    
+                }
             }
         }
     }
-    
+
     
     
     

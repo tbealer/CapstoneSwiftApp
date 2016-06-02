@@ -18,6 +18,11 @@ class GameViewController: UIViewController {
     
    
     override func viewDidLoad() {
+        
+        UIApplication.sharedApplication().idleTimerDisabled = true
+
+        
+        
         super.viewDidLoad()
          
         if let scene = GameScene(fileNamed:"GameScene") {
