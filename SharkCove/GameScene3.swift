@@ -13,6 +13,7 @@ import SpriteKit
 
 class GameScene3: SKScene, SKPhysicsContactDelegate {
     
+    
     var player: SKSpriteNode!
     var shield: SKSpriteNode!
     var bomb: SKSpriteNode!
@@ -20,43 +21,48 @@ class GameScene3: SKScene, SKPhysicsContactDelegate {
     var nextbtn: SKSpriteNode!
     var homebtn: SKSpriteNode!
     var sharkIndicator: SKSpriteNode!
+    var wallIndicator: SKSpriteNode!
     
     var lastTouchPosition: CGPoint?
     
     var motionManager: CMMotionManager!
     
-    var wallLabel: SKLabelNode!
+    //    var wallLabel: SKLabelNode!
     
-    var wall: Int = 0 {
-        didSet {
-            wallLabel.text = "wall: \(wall)"
-        }
-    }
+    var wall: Int = 0
     
-//    var sharkLabel: SKLabelNode!
+    //        {
+    //        didSet {
+    //            wallLabel.text = "wall: \(wall)"
+    //        }
+    //    }
+    
+    //    var sharkLabel: SKLabelNode!
     
     var shark: Int = 0
-//        {
-//        didSet {
-//            sharkLabel.text = "shark: \(shark)"
-//        }
-//    }
+    //        {
+    //        didSet {
+    //            sharkLabel.text = "shark: \(shark)"
+    //        }
+    //    }
     
     var bombLabel: SKLabelNode!
     
     var bomb1: Int = 0 {
         didSet {
-            bombLabel.text = "Bombs: \(bomb1)"
+            bombLabel.text = "X \(bomb1)"
         }
     }
     
-    var bomb2Label: SKLabelNode!
+    //    var bomb2Label: SKLabelNode!
     
-    var bomb2: Int = 0 {
-        didSet {
-            bomb2Label.text = "Active Bombs: \(bomb2)"
-        }
-    }
+    var bomb2: Int = 0
+    
+    //        {
+    //        didSet {
+    //            bomb2Label.text = "Active Bombs: \(bomb2)"
+    //        }
+    //    }
     
     
     var mask1: Int = 0
@@ -72,7 +78,16 @@ class GameScene3: SKScene, SKPhysicsContactDelegate {
         sharkIndicator.zPosition = 4
         addChild(sharkIndicator)
         
+        wallIndicator = SKSpriteNode(imageNamed: "coral")
+        wallIndicator.position = CGPoint(x: 50, y: 630)
+        wallIndicator.anchorPoint = CGPointMake(0.0, 0.5)
+        wallIndicator.zPosition = 4
+        addChild(wallIndicator)
+        
         self.physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
+        
+        
+        
         
         let background = SKSpriteNode(imageNamed: "background2")
         background.position = CGPoint(x: 512, y: 384)
@@ -90,29 +105,33 @@ class GameScene3: SKScene, SKPhysicsContactDelegate {
         loadLevel()
         makeJoint()
         
-        wallLabel = SKLabelNode(fontNamed: "Chalkduster")
-        wallLabel.text = "Walls: 0"
-        wallLabel.horizontalAlignmentMode = .Left
-        wallLabel.position = CGPoint(x: 50, y: 630)
-        addChild(wallLabel)
+        //        wallLabel = SKLabelNode(fontNamed: "Chalkduster")
+        //        wallLabel.text = "Walls: 0"
+        //        wallLabel.horizontalAlignmentMode = .Left
+        //        wallLabel.position = CGPoint(x: 50, y: 630)
+        //        addChild(wallLabel)
         
-//        sharkLabel = SKLabelNode(fontNamed: "Chalkduster")
-//        sharkLabel.text = "Sharks: 0"
-//        sharkLabel.horizontalAlignmentMode = .Left
-//        sharkLabel.position = CGPoint(x: 200, y: 630)
-//        addChild(sharkLabel)
+        //        sharkLabel = SKLabelNode(fontNamed: "Chalkduster")
+        //        sharkLabel.text = "Sharks: 0"
+        //        sharkLabel.horizontalAlignmentMode = .Left
+        //        sharkLabel.position = CGPoint(x: 200, y: 630)
+        //        addChild(sharkLabel)
+        
+        let bombthing = SKSpriteNode(imageNamed: "rsz_bomb-sprite-final")
+        bombthing.position = CGPoint(x: 475, y: 630)
+        addChild(bombthing)
         
         bombLabel = SKLabelNode(fontNamed: "Chalkduster")
-        bombLabel.text = "Bombs: 0"
+        bombLabel.text = "X 0"
         bombLabel.horizontalAlignmentMode = .Left
         bombLabel.position = CGPoint(x: 500, y: 630)
         addChild(bombLabel)
         
-        bomb2Label = SKLabelNode(fontNamed: "Chalkduster")
-        bomb2Label.text = "Active Bombs: 0"
-        bomb2Label.horizontalAlignmentMode = .Left
-        bomb2Label.position = CGPoint(x: 700, y: 630)
-        addChild(bomb2Label)
+        //        bomb2Label = SKLabelNode(fontNamed: "Chalkduster")
+        //        bomb2Label.text = "Active Bombs: 0"
+        //        bomb2Label.horizontalAlignmentMode = .Left
+        //        bomb2Label.position = CGPoint(x: 700, y: 630)
+        //        addChild(bomb2Label)
         
         
         motionManager = CMMotionManager()
@@ -231,34 +250,85 @@ class GameScene3: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    func bombFunc () {
+        bomb2 += 1
+        
+        if bomb2 == 1 {
+            
+            let activebomb = SKSpriteNode(imageNamed: "star")
+            activebomb.position = CGPoint(x: 700, y: 630)
+            addChild(activebomb)
+            
+        }
+        bomb1 -= 1
+    }
+    
     func sharkindicator () {
         
         
         
         if shark == 1 {
             
-            let action = SKAction.scaleXTo(1.2, y: 1.2, duration: 1)
+            let action = SKAction.scaleXTo(1.2, y: 1.2, duration: 0.5)
             sharkIndicator.runAction(action)
         } else if shark == 2 {
             
-            let action = SKAction.scaleXTo(1.4, y: 1.4, duration: 1)
+            let action = SKAction.scaleXTo(1.4, y: 1.4, duration: 0.5)
             sharkIndicator.runAction(action)
             
         } else if shark == 3 {
-            let action = SKAction.scaleXTo(1.6, y: 1.6, duration: 1)
+            let action = SKAction.scaleXTo(1.6, y: 1.6, duration: 0.5)
             sharkIndicator.runAction(action)
         } else if shark == 4 {
-            let action = SKAction.scaleXTo(1.8, y: 1.8, duration: 1)
+            let action = SKAction.scaleXTo(1.8, y: 1.8, duration: 0.5)
             sharkIndicator.runAction(action)
         } else if shark == 5 {
-            let action = SKAction.scaleXTo(2.0, y: 2.0, duration: 1)
+            let action = SKAction.scaleXTo(2.0, y: 2.0, duration: 0.5)
             sharkIndicator.runAction(action)
         }
         else if shark == 6 {
-            let action = SKAction.scaleXTo(2.2, y: 2.2, duration: 1)
+            let action = SKAction.scaleXTo(2.2, y: 2.2, duration: 0.5)
             sharkIndicator.runAction(action)
         }
     }
+    
+    func wallindicator () {
+        
+        
+        
+        if wall == 1 {
+            
+            let action = SKAction.scaleXTo(1.2, y: 1.2, duration: 0.5)
+            wallIndicator.runAction(action)
+        } else if wall == 2 {
+            
+            let action = SKAction.scaleXTo(1.4, y: 1.4, duration: 0.5)
+            wallIndicator.runAction(action)
+            
+        } else if wall == 3 {
+            let action = SKAction.scaleXTo(1.6, y: 1.6, duration: 0.5)
+            wallIndicator.runAction(action)
+        } else if wall == 4 {
+            let action = SKAction.scaleXTo(1.8, y: 1.8, duration: 0.5)
+            wallIndicator.runAction(action)
+        } else if wall == 5 {
+            let action = SKAction.scaleXTo(2.0, y: 2.0, duration: 0.5)
+            wallIndicator.runAction(action)
+        }
+        else if wall == 6 {
+            let action = SKAction.scaleXTo(2.2, y: 2.2, duration: 0.5)
+            wallIndicator.runAction(action)
+        }
+        else if wall == 7 {
+            let action = SKAction.scaleXTo(2.4, y: 2.2, duration: 0.5)
+            wallIndicator.runAction(action)
+        }
+        else if wall == 8 {
+            let action = SKAction.scaleXTo(2.6, y: 2.2, duration: 0.5)
+            wallIndicator.runAction(action)
+        }
+    }
+    
     
     
     func makeJoint () {
@@ -331,10 +401,7 @@ class GameScene3: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func bombFunc () {
-        bomb2 += 1
-        bomb1 -= 1
-    }
+  
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first {
@@ -405,6 +472,7 @@ class GameScene3: SKScene, SKPhysicsContactDelegate {
             
             if node.name == "wall" {
                 wall += 1
+                wallindicator()
                 node.hidden = false
                 
             } else if node.name == "treasure" {
@@ -422,6 +490,7 @@ class GameScene3: SKScene, SKPhysicsContactDelegate {
         } else {
             if node.name == "wall" {
                 wall += 1
+                wallindicator()
                 
             }  else if node.name == "shark" {
                 shark += 1
@@ -445,6 +514,7 @@ class GameScene3: SKScene, SKPhysicsContactDelegate {
             
             if node.name == "wall" {
                 wall -= 1
+                wallindicator()
                 node.hidden = true
                 
             } else if node.name == "treasure" {
@@ -462,6 +532,7 @@ class GameScene3: SKScene, SKPhysicsContactDelegate {
         } else {
             if node.name == "wall" {
                 wall -= 1
+                wallindicator()
                 
             }  else if node.name == "shark" {
                 shark -= 1
