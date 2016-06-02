@@ -19,6 +19,10 @@ class LevelMenuScene2: SKScene, SKPhysicsContactDelegate {
     var level9:SKSpriteNode!
     var level10:SKSpriteNode!
     var previouslevels:SKSpriteNode!
+    var locked: SKSpriteNode!
+    var locked2: SKSpriteNode!
+    var locked3: SKSpriteNode!
+    var locked4: SKSpriteNode!
     
     
     
@@ -83,6 +87,26 @@ class LevelMenuScene2: SKScene, SKPhysicsContactDelegate {
     }
     
     func addButtons () {
+        
+        locked = SKSpriteNode(imageNamed: "vortex")
+        locked.position = CGPoint(x: 400, y: 400)
+        locked.zPosition = 1
+        
+        locked2 = SKSpriteNode(imageNamed: "vortex")
+        locked2.position = CGPoint(x: 400, y: 300)
+        locked2.zPosition = 1
+        
+        locked3 = SKSpriteNode(imageNamed: "vortex")
+        locked3.position = CGPoint(x: 500, y: 500)
+        locked3.zPosition = 1
+        
+        locked4 = SKSpriteNode(imageNamed: "vortex")
+        locked4.position = CGPoint(x: 500, y: 400)
+        locked4.zPosition = 1
+        
+       
+        
+        
         level6 = SKSpriteNode(imageNamed: "star")
 //        level6.text = "Level 6"
 //        level6.fontSize = 20
@@ -99,8 +123,24 @@ class LevelMenuScene2: SKScene, SKPhysicsContactDelegate {
         level7.zPosition = 1
         level7.position = CGPoint(x: 400, y: 400)
         
-        
-        addChild(level7)
+        func updatelvl7 () {
+            
+            let defaults = NSUserDefaults.standardUserDefaults()
+            let pass = defaults.integerForKey("comp7")
+            
+            print(pass)
+            
+            
+            if pass == 0 {
+                
+                addChild(locked)
+                
+            } else  {
+                
+                addChild(level7)
+            }
+        }
+        updatelvl7()
         
         level8 = SKSpriteNode(imageNamed: "star")
 //        level8.text = "Level 8"
@@ -110,7 +150,24 @@ class LevelMenuScene2: SKScene, SKPhysicsContactDelegate {
         level8.position = CGPoint(x: 400, y: 300)
         
         
-        addChild(level8)
+        func updatelvl8 () {
+            
+            let defaults = NSUserDefaults.standardUserDefaults()
+            let pass = defaults.integerForKey("comp8")
+            
+            print(pass)
+            
+            
+            if pass == 0 {
+                
+                addChild(locked2)
+                
+            } else  {
+                
+                addChild(level8)
+            }
+        }
+        updatelvl8()
         
         
         
@@ -122,7 +179,24 @@ class LevelMenuScene2: SKScene, SKPhysicsContactDelegate {
         level9.position = CGPoint(x: 500, y: 500)
         
         
-        addChild(level9)
+        func updatelvl9 () {
+            
+            let defaults = NSUserDefaults.standardUserDefaults()
+            let pass = defaults.integerForKey("comp9")
+            
+            print(pass)
+            
+            
+            if pass == 0 {
+                
+                addChild(locked3)
+                
+            } else  {
+                
+                addChild(level9)
+            }
+        }
+        updatelvl9()
         
         level10 = SKSpriteNode(imageNamed: "star")
 //        level10.text = "Level 10"
@@ -132,7 +206,24 @@ class LevelMenuScene2: SKScene, SKPhysicsContactDelegate {
         level10.position = CGPoint(x: 500, y: 400)
         
         
-        addChild(level10)
+        func updatelvl10 () {
+            
+            let defaults = NSUserDefaults.standardUserDefaults()
+            let pass = defaults.integerForKey("comp10")
+            
+            print(pass)
+            
+            
+            if pass == 0 {
+                
+                addChild(locked4)
+                
+            } else  {
+                
+                addChild(level10)
+            }
+        }
+        updatelvl10()
         
         previouslevels = SKSpriteNode(imageNamed: "star")
 //        previouslevels.text = "Previous Levels"

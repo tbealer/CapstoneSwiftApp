@@ -19,6 +19,7 @@ class GameScene8: SKScene, SKPhysicsContactDelegate {
     var mask: SKSpriteNode!
     var nextbtn: SKSpriteNode!
     var homebtn: SKSpriteNode!
+    var sharkIndicator: SKSpriteNode!
     
     var lastTouchPosition: CGPoint?
     
@@ -32,13 +33,15 @@ class GameScene8: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    var sharkLabel: SKLabelNode!
+//    var sharkLabel: SKLabelNode!
     
-    var shark: Int = 0 {
-        didSet {
-            sharkLabel.text = "shark: \(shark)"
-        }
-    }
+    var shark: Int = 0
+        
+//        {
+//        didSet {
+//            sharkLabel.text = "shark: \(shark)"
+//        }
+//    }
     
     var bombLabel: SKLabelNode!
     
@@ -63,6 +66,13 @@ class GameScene8: SKScene, SKPhysicsContactDelegate {
     var gameOver = false
     
     override func didMoveToView(view: SKView) {
+        
+        sharkIndicator = SKSpriteNode(imageNamed: "gameshark")
+        sharkIndicator.position = CGPoint(x: 200, y: 630)
+        sharkIndicator.anchorPoint = CGPointMake(0.0, 0.5)
+        sharkIndicator.zPosition = 4
+        addChild(sharkIndicator)
+        
         self.physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
         
         let background = SKSpriteNode(imageNamed: "background2")
@@ -87,11 +97,11 @@ class GameScene8: SKScene, SKPhysicsContactDelegate {
         wallLabel.position = CGPoint(x: 50, y: 630)
         addChild(wallLabel)
         
-        sharkLabel = SKLabelNode(fontNamed: "Chalkduster")
-        sharkLabel.text = "Sharks: 0"
-        sharkLabel.horizontalAlignmentMode = .Left
-        sharkLabel.position = CGPoint(x: 200, y: 630)
-        addChild(sharkLabel)
+//        sharkLabel = SKLabelNode(fontNamed: "Chalkduster")
+//        sharkLabel.text = "Sharks: 0"
+//        sharkLabel.horizontalAlignmentMode = .Left
+//        sharkLabel.position = CGPoint(x: 200, y: 630)
+//        addChild(sharkLabel)
         
         bombLabel = SKLabelNode(fontNamed: "Chalkduster")
         bombLabel.text = "Bombs: 0"
@@ -220,6 +230,35 @@ class GameScene8: SKScene, SKPhysicsContactDelegate {
             }
         }
         
+    }
+    
+    func sharkindicator () {
+        
+        
+        
+        if shark == 1 {
+            
+            let action = SKAction.scaleXTo(1.2, y: 1.2, duration: 1)
+            sharkIndicator.runAction(action)
+        } else if shark == 2 {
+            
+            let action = SKAction.scaleXTo(1.4, y: 1.4, duration: 1)
+            sharkIndicator.runAction(action)
+            
+        } else if shark == 3 {
+            let action = SKAction.scaleXTo(1.6, y: 1.6, duration: 1)
+            sharkIndicator.runAction(action)
+        } else if shark == 4 {
+            let action = SKAction.scaleXTo(1.8, y: 1.8, duration: 1)
+            sharkIndicator.runAction(action)
+        } else if shark == 5 {
+            let action = SKAction.scaleXTo(2.0, y: 2.0, duration: 1)
+            sharkIndicator.runAction(action)
+        }
+        else if shark == 6 {
+            let action = SKAction.scaleXTo(2.2, y: 2.2, duration: 1)
+            sharkIndicator.runAction(action)
+        }
     }
     
     
@@ -373,6 +412,7 @@ class GameScene8: SKScene, SKPhysicsContactDelegate {
                 node.hidden = false
             } else if node.name == "shark" {
                 shark += 1
+                sharkindicator()
                 node.hidden = false
             } else if node.name == "bomb" {
                 node.hidden = false
@@ -386,6 +426,7 @@ class GameScene8: SKScene, SKPhysicsContactDelegate {
                 
             }  else if node.name == "shark" {
                 shark += 1
+                sharkindicator()
             }
         }
         
@@ -411,6 +452,7 @@ class GameScene8: SKScene, SKPhysicsContactDelegate {
                 node.hidden = true
             } else if node.name == "shark" {
                 shark -= 1
+                sharkindicator()
                 node.hidden = true
             } else if node.name == "bomb" {
                 node.hidden = true
@@ -424,6 +466,7 @@ class GameScene8: SKScene, SKPhysicsContactDelegate {
                 
             }  else if node.name == "shark" {
                 shark -= 1
+                sharkindicator()
             }
         }
         
@@ -483,6 +526,22 @@ class GameScene8: SKScene, SKPhysicsContactDelegate {
             }
             
         } else if node.name == "treasure" {
+            
+            func updatedefaults () {
+                
+                
+                
+                let defaults = NSUserDefaults.standardUserDefaults()
+                defaults.setInteger(1, forKey: "comp9")
+                
+                let this = defaults.integerForKey("comp9")
+                
+                print("updated ", this)
+                
+                
+            }
+            
+            updatedefaults()
             //            player.physicsBody!.dynamic = false
             gameOver = true
             

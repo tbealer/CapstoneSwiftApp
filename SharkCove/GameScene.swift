@@ -14,6 +14,10 @@ import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    
+
+    
+    
     var playbutton: SKSpriteNode!
     var lvlbutton: SKSpriteNode!
 
@@ -24,6 +28,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMoveToView(view: SKView) {
         
+
         
         
         let background = SKSpriteNode(imageNamed: "background2")
