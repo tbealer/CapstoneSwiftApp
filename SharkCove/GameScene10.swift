@@ -22,52 +22,19 @@ class GameScene10: SKScene, SKPhysicsContactDelegate {
     var homebtn: SKSpriteNode!
     var sharkIndicator: SKSpriteNode!
     var wallIndicator: SKSpriteNode!
-    
     var lastTouchPosition: CGPoint?
-    
     var motionManager: CMMotionManager!
-    
-    //    var wallLabel: SKLabelNode!
-    
     var wall: Int = 0
-    
-    //        {
-    //        didSet {
-    //            wallLabel.text = "wall: \(wall)"
-    //        }
-    //    }
-    
-    //    var sharkLabel: SKLabelNode!
-    
     var shark: Int = 0
-    //        {
-    //        didSet {
-    //            sharkLabel.text = "shark: \(shark)"
-    //        }
-    //    }
-    
     var bombLabel: SKLabelNode!
-    
-    var bomb1: Int = 0 {
+        var bomb1: Int = 0 {
         didSet {
             bombLabel.text = "X \(bomb1)"
         }
     }
-    
-    //    var bomb2Label: SKLabelNode!
-    
+    var bomb2Label: SKLabelNode!
     var bomb2: Int = 0
-    
-    //        {
-    //        didSet {
-    //            bomb2Label.text = "Active Bombs: \(bomb2)"
-    //        }
-    //    }
-    
-    
     var mask1: Int = 0
-    
-    
     var gameOver = false
     
     override func didMoveToView(view: SKView) {
@@ -86,36 +53,17 @@ class GameScene10: SKScene, SKPhysicsContactDelegate {
         
         self.physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
         
-        
-        
-        
         let background = SKSpriteNode(imageNamed: "background2")
         background.position = CGPoint(x: 512, y: 384)
         background.blendMode = .Replace
         background.zPosition = -1
         addChild(background)
         
-        
-        
         physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         physicsWorld.contactDelegate = self
         
-        
-        
         loadLevel()
         makeJoint()
-        
-        //        wallLabel = SKLabelNode(fontNamed: "Chalkduster")
-        //        wallLabel.text = "Walls: 0"
-        //        wallLabel.horizontalAlignmentMode = .Left
-        //        wallLabel.position = CGPoint(x: 50, y: 630)
-        //        addChild(wallLabel)
-        
-        //        sharkLabel = SKLabelNode(fontNamed: "Chalkduster")
-        //        sharkLabel.text = "Sharks: 0"
-        //        sharkLabel.horizontalAlignmentMode = .Left
-        //        sharkLabel.position = CGPoint(x: 200, y: 630)
-        //        addChild(sharkLabel)
         
         let bombthing = SKSpriteNode(imageNamed: "therealbomb")
         bombthing.position = CGPoint(x: 475, y: 630)
@@ -127,13 +75,10 @@ class GameScene10: SKScene, SKPhysicsContactDelegate {
         bombLabel.position = CGPoint(x: 500, y: 630)
         addChild(bombLabel)
         
-        //        bomb2Label = SKLabelNode(fontNamed: "Chalkduster")
-        //        bomb2Label.text = "Active Bombs: 0"
-        //        bomb2Label.horizontalAlignmentMode = .Left
-        //        bomb2Label.position = CGPoint(x: 700, y: 630)
-        //        addChild(bomb2Label)
-        
-        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let bombs = defaults.integerForKey("bombs")
+        bomb1 = bombs
+
         motionManager = CMMotionManager()
         motionManager.startAccelerometerUpdates()
     }
@@ -182,7 +127,7 @@ class GameScene10: SKScene, SKPhysicsContactDelegate {
                             addChild(node)
                         } else if letter == "m"  {
                             // load star
-                            let node = SKSpriteNode(imageNamed: "therealmask")
+                            let node = SKSpriteNode(imageNamed: "therealsonar")
                             node.name = "mask"
                             node.physicsBody = SKPhysicsBody(rectangleOfSize: node.size)
                             node.physicsBody!.dynamic = false
@@ -263,6 +208,19 @@ class GameScene10: SKScene, SKPhysicsContactDelegate {
         bomb1 -= 1
     }
     
+    func sonarFunc () {
+        
+        mask1 = 1
+        
+        
+        
+        player.physicsBody!.dynamic = true
+        
+        
+        
+        
+    }
+    
     func sharkindicator () {
         
         
@@ -334,7 +292,7 @@ class GameScene10: SKScene, SKPhysicsContactDelegate {
     func makeJoint () {
         
         
-        player = SKSpriteNode(imageNamed: "swimmerfinal")
+        player = SKSpriteNode(imageNamed: "therealsub")
         player.position = CGPoint(x: 30, y: 450)
         player.anchorPoint = CGPoint(x:0.5,y:0.5)
         
@@ -389,13 +347,6 @@ class GameScene10: SKScene, SKPhysicsContactDelegate {
                 
                 bombFunc()
                 
-//                let alert = UIAlertController(title: "Bomb is activated!", message: "The next Shark you touch is toast!!", preferredStyle: UIAlertControllerStyle.ActionSheet)
-//                
-//                self.view?.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
-//                let triggerTime = (Int64(NSEC_PER_SEC) * 1)
-//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
-//                    self.view?.window?.rootViewController?.dismissViewControllerAnimated( true, completion: nil)
-//                })
             }
             
         }
@@ -611,6 +562,7 @@ class GameScene10: SKScene, SKPhysicsContactDelegate {
             
             
             player.runAction(sequence) { [unowned self] in
+               
                 
                 self.shark = 0
                 self.wall = 0
@@ -632,39 +584,66 @@ class GameScene10: SKScene, SKPhysicsContactDelegate {
             
         } else if node.name == "bomb" {
             
+            player.physicsBody!.dynamic = false
             
+            
+            let bombalert = SKSpriteNode(imageNamed: "therealbomb")
+            bombalert.position = CGPoint(x: 500, y: 400)
+            addChild(bombalert)
+            
+            let action = SKAction.scaleXTo(4.0, y: 4.0, duration: 0.5)
+            bombalert.runAction(action)
+            
+            
+            let wait = SKAction.waitForDuration(1.0)
+            let run = SKAction.runBlock {
+                
+                let shrink = SKAction.scaleXTo(1.0, y: 1.0, duration: 0.5)
+                
+                
+                bombalert.runAction(shrink)
+                bombalert.removeFromParent()
+                self.player.physicsBody!.dynamic = true
+                
+            }
+            player.runAction(SKAction.sequence([wait, run]))
             self.bomb1 += 1
             
             node.removeFromParent()
             
-//            let alert = UIAlertController(title: "You Picked Up a Shark Bomb!", message: "To activate simply tap the swimmer! The next shark you run into will be toast!", preferredStyle: UIAlertControllerStyle.ActionSheet)
-//            
-//            self.view?.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
-//            let triggerTime = (Int64(NSEC_PER_SEC) * 2)
-//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
-//                self.view?.window?.rootViewController?.dismissViewControllerAnimated( true, completion: nil)
-//            })
             
-            
-            
-            
-            
-            // next level?
         } else if node.name == "mask" {
             
-            self.mask1 += 1
+            player.physicsBody!.dynamic = false
+            
+            let sonarindicator = SKSpriteNode(imageNamed: "therealsonar")
+            sonarindicator.position = CGPoint(x: 750, y: 630)
+            addChild(sonarindicator)
+            
+            let sonaralert = SKSpriteNode(imageNamed: "therealsonar")
+            sonaralert.position = CGPoint(x: 500, y: 400)
+            addChild(sonaralert)
+            
+            let action = SKAction.scaleXTo(4.0, y: 4.0, duration: 0.5)
+            sonaralert.runAction(action)
+            
+            
+            let wait = SKAction.waitForDuration(1.0)
+            let run = SKAction.runBlock {
+                
+                let shrink = SKAction.scaleXTo(1.0, y: 1.0, duration: 0.5)
+                
+                self.sonarFunc()
+                sonaralert.runAction(shrink)
+                sonaralert.removeFromParent()
+            }
+            player.runAction(SKAction.sequence([wait, run]))
+            
             
             node.removeFromParent()
             
-//            let alert = UIAlertController(title: "You Picked Up a Mask!", message: "Now obstacles within a small radius are visible", preferredStyle: UIAlertControllerStyle.ActionSheet)
-//            
-//            self.view?.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
-//            let triggerTime = (Int64(NSEC_PER_SEC) * 1)
-//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
-//                self.view?.window?.rootViewController?.dismissViewControllerAnimated( true, completion: nil)
-//            })
             
-            // next level?
         }
+
     }
 }

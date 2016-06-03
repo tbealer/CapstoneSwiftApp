@@ -39,6 +39,10 @@
 		708F5C081CF8A187006A9B24 /* SharkCoveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708F5C071CF8A187006A9B24 /* SharkCoveUITests.swift */; };
 		708F5C2A1CF8A23E006A9B24 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 708F5C1D1CF8A23E006A9B24 /* level1.txt */; };
 		708F5C3C1CF8ED54006A9B24 /* SudoCode in Resources */ = {isa = PBXBuildFile; fileRef = 708F5C3B1CF8ED54006A9B24 /* SudoCode */; };
+		70DF5CA01D01CC3600C5D69E /* therealsub.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF5C9F1D01CC3600C5D69E /* therealsub.png */; };
+		70DF5CA21D01CF0000C5D69E /* therealsonar.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF5CA11D01CF0000C5D69E /* therealsonar.png */; };
+		70DF5CA51D01E4DB00C5D69E /* block.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF5CA31D01E4DB00C5D69E /* block.png */; };
+		70DF5CA61D01E4DB00C5D69E /* block@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF5CA41D01E4DB00C5D69E /* block@2x.png */; };
 		70E8512D1CFFEC62002196EF /* LevelsComplete.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70E8512C1CFFEC62002196EF /* LevelsComplete.plist */; };
 		70E851311D00CF93002196EF /* therealbomb.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E851301D00CF93002196EF /* therealbomb.png */; };
 		70E851331D00D1B2002196EF /* therealactivebomb.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E851321D00D1B2002196EF /* therealactivebomb.png */; };
@@ -161,6 +165,10 @@
 		708F5C091CF8A187006A9B24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		708F5C1D1CF8A23E006A9B24 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = level1.txt; path = Content/level1.txt; sourceTree = "<group>"; };
 		708F5C3B1CF8ED54006A9B24 /* SudoCode */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SudoCode; sourceTree = "<group>"; };
+		70DF5C9F1D01CC3600C5D69E /* therealsub.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = therealsub.png; sourceTree = "<group>"; };
+		70DF5CA11D01CF0000C5D69E /* therealsonar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = therealsonar.png; sourceTree = "<group>"; };
+		70DF5CA31D01E4DB00C5D69E /* block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block.png; sourceTree = "<group>"; };
+		70DF5CA41D01E4DB00C5D69E /* block@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "block@2x.png"; sourceTree = "<group>"; };
 		70E8512C1CFFEC62002196EF /* LevelsComplete.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LevelsComplete.plist; sourceTree = "<group>"; };
 		70E851301D00CF93002196EF /* therealbomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = therealbomb.png; sourceTree = "<group>"; };
 		70E851321D00D1B2002196EF /* therealactivebomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = therealactivebomb.png; sourceTree = "<group>"; };
@@ -281,6 +289,8 @@
 				7063F5AD1CFF5810003870A2 /* LaunchScreen.storyboard */,
 				7063F5AF1CFF5818003870A2 /* Main.storyboard */,
 				708F5BEE1CF8A187006A9B24 /* Assets.xcassets */,
+				70DF5C9F1D01CC3600C5D69E /* therealsub.png */,
+				70DF5CA11D01CF0000C5D69E /* therealsonar.png */,
 				703CFE4A1CFCAEC50012ACB8 /* coral.png */,
 				703CFE481CFCADD30012ACB8 /* gameshark.png */,
 				703CFE451CFCA2740012ACB8 /* background2.png */,
@@ -346,6 +356,8 @@
 				70E851521D00DB83002196EF /* therealhomebtn.png */,
 				70E851541D00DC8D002196EF /* therealtitle.png */,
 				70E851561D00DDFC002196EF /* therealplaybtn.png */,
+				70DF5CA31D01E4DB00C5D69E /* block.png */,
+				70DF5CA41D01E4DB00C5D69E /* block@2x.png */,
 				70E851581D00DE5A002196EF /* therealinstructionsbtn.png */,
 				70E8515A1D00E052002196EF /* therealretrybtn.png */,
 				70E851661D00F2EF002196EF /* tryinstruct2.png */,
@@ -513,6 +525,8 @@
 				70EEEFC31CFF8C2C00D25704 /* level9.txt in Resources */,
 				7063F5B01CFF5818003870A2 /* Main.storyboard in Resources */,
 				70E8513F1D00D758002196EF /* thereallockedbtn.png in Resources */,
+				70DF5CA01D01CC3600C5D69E /* therealsub.png in Resources */,
+				70DF5CA61D01E4DB00C5D69E /* block@2x.png in Resources */,
 				70E851481D00DA70002196EF /* thereallvl5btn.png in Resources */,
 				70EA70C71CFF4979007193C7 /* mainMenu.txt in Resources */,
 				7063F5B81CFF5A6B003870A2 /* GameScene1.sks in Resources */,
@@ -532,6 +546,7 @@
 				708F5BEF1CF8A187006A9B24 /* Assets.xcassets in Resources */,
 				70E851391D00D5F8002196EF /* thereallvl1btn.png in Resources */,
 				70E851671D00F2EF002196EF /* tryinstruct2.png in Resources */,
+				70DF5CA21D01CF0000C5D69E /* therealsonar.png in Resources */,
 				70E8514B1D00DA70002196EF /* thereallvl8btn.png in Resources */,
 				7063F5AE1CFF5810003870A2 /* LaunchScreen.storyboard in Resources */,
 				707BCB701CFE2B9E00CC55BE /* bubbles.png in Resources */,
@@ -548,6 +563,7 @@
 				70E851531D00DB83002196EF /* therealhomebtn.png in Resources */,
 				708F5C3C1CF8ED54006A9B24 /* SudoCode in Resources */,
 				70E851571D00DDFC002196EF /* therealplaybtn.png in Resources */,
+				70DF5CA51D01E4DB00C5D69E /* block.png in Resources */,
 				708F5C2A1CF8A23E006A9B24 /* level1.txt in Resources */,
 				7063F5CD1CFF8345003870A2 /* level3.txt in Resources */,
 				703CFE491CFCADD30012ACB8 /* gameshark.png in Resources */,
