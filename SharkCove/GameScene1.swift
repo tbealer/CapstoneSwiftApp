@@ -37,6 +37,9 @@ extension CGVector {
 
 class GameScene1: SKScene, SKPhysicsContactDelegate {
     
+    var activebomb: SKSpriteNode!
+
+    
     var player: SKSpriteNode!
     var shield: SKSpriteNode!
     var bomb: SKSpriteNode!
@@ -207,18 +210,7 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
         
     }
     
-    func bombFunc () {
-        bomb2 += 1
-        
-        if bomb2 == 1 {
-        
-            let activebomb = SKSpriteNode(imageNamed: "therealactivebomb")
-            activebomb.position = CGPoint(x: 700, y: 630)
-            addChild(activebomb)
-        
-        }
-        
-    }
+
     
     func sonarFunc () {
         
@@ -229,7 +221,6 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
         
         let wait = SKAction.waitForDuration(5.0)
         let run = SKAction.runBlock {
-            //NEW
             
             
             
@@ -351,8 +342,11 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
             
             if(player.containsPoint(location) && (bomb1 > 0))
             {
-                
-                    bombFunc()
+                //NEW
+                    bomb2 += 1
+                    activebomb = SKSpriteNode(imageNamed: "therealactivebomb")
+                    activebomb.position = CGPoint(x: 475, y: 630)
+                    addChild(activebomb)
                     self.bomb1 -= 1
                 
             }
@@ -417,7 +411,6 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
     }
     
     func shieldCollidedWithNode(node: SKNode) {
-       //NEW
         if (mask1 == 1) {
             
             if node.name == "wall" {
@@ -503,8 +496,8 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
     
     func playerCollidedWithNode(node: SKNode) {
         if node.name == "shark" {
-            
-            if (bomb2 >= 1) {
+            print(bomb2)
+            if (bomb2 == 1) {
                 
                 if(node.name == "shark"){
                     let blood = SKSpriteNode(imageNamed: "bloodfinal")
@@ -517,7 +510,9 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
                     addChild(blood)
                     node.removeFromParent()
                     shark -= 1
-                    bomb2 -= 1
+                    bomb2 = 0
+                    activebomb.removeFromParent()
+                    
                 }
             } else {
                 
@@ -656,7 +651,6 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
             }
             player.runAction(SKAction.sequence([wait, run]))
             
-            //NEW
             let timed = SKAction.waitForDuration(7)
             let run1 = SKAction.runBlock {
                 

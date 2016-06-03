@@ -13,7 +13,8 @@ import SpriteKit
 
 class GameScene5: SKScene, SKPhysicsContactDelegate {
     
-    
+    var activebomb: SKSpriteNode!
+
     var player: SKSpriteNode!
     var shield: SKSpriteNode!
     var bomb: SKSpriteNode!
@@ -258,18 +259,7 @@ class GameScene5: SKScene, SKPhysicsContactDelegate {
         
     }
     
-    func bombFunc () {
-        bomb2 += 1
-        
-        if bomb2 == 1 {
-            
-            let activebomb = SKSpriteNode(imageNamed: "therealactivebomb")
-            activebomb.position = CGPoint(x: 700, y: 630)
-            addChild(activebomb)
-            
-        }
-        bomb1 -= 1
-    }
+ 
     
     func sonarFunc () {
         
@@ -419,15 +409,11 @@ class GameScene5: SKScene, SKPhysicsContactDelegate {
             if(player.containsPoint(location) && (bomb1 > 0))
             {
                 
-                bombFunc()
-                
-//                let alert = UIAlertController(title: "Bomb is activated!", message: "The next Shark you touch is toast!!", preferredStyle: UIAlertControllerStyle.ActionSheet)
-//                
-//                self.view?.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
-//                let triggerTime = (Int64(NSEC_PER_SEC) * 1)
-//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
-//                    self.view?.window?.rootViewController?.dismissViewControllerAnimated( true, completion: nil)
-//                })
+                bomb2 += 1
+                activebomb = SKSpriteNode(imageNamed: "therealactivebomb")
+                activebomb.position = CGPoint(x: 475, y: 630)
+                addChild(activebomb)
+                self.bomb1 -= 1
             }
             
         }
@@ -599,7 +585,8 @@ class GameScene5: SKScene, SKPhysicsContactDelegate {
                     addChild(blood)
                     node.removeFromParent()
                     shark -= 1
-                    bomb2 -= 1
+                    bomb2 = 0
+                    activebomb.removeFromParent()
                 }
             } else {
                 
