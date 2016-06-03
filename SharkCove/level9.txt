@@ -1,9 +1,9 @@
 xxxxxxxxxxxxxxxxxxxx
-m  x x     b      b
- x sts     s   sm s
+m  x x     b s    b
+ x sts     s    m s
  s xsx  x
    xxx  x  x  x
-b      s   x x   s
+b          x x   s
     s    s s       x
   x   b  s s x  s  s
     m    s s       x

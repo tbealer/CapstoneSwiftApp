@@ -23,7 +23,7 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
     var nextbtn: SKSpriteNode!
     var homebtn: SKSpriteNode!
     var sharkIndicator: SKSpriteNode!
-    var wallIndicator: SKSpriteNode!
+//    var wallIndicator: SKSpriteNode!
     
     var lastTouchPosition: CGPoint?
     
@@ -86,11 +86,11 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
         sharkIndicator.zPosition = 4
         addChild(sharkIndicator)
         
-        wallIndicator = SKSpriteNode(imageNamed: "coral")
-        wallIndicator.position = CGPoint(x: 50, y: 630)
-        wallIndicator.anchorPoint = CGPointMake(0.0, 0.5)
-        wallIndicator.zPosition = 4
-        addChild(wallIndicator)
+//        wallIndicator = SKSpriteNode(imageNamed: "coral")
+//        wallIndicator.position = CGPoint(x: 50, y: 630)
+//        wallIndicator.anchorPoint = CGPointMake(0.0, 0.5)
+//        wallIndicator.zPosition = 4
+//        addChild(wallIndicator)
         
         self.physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
         
@@ -188,8 +188,8 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
                             // load vortex
                             let node = SKSpriteNode(imageNamed: "coral")
                             node.name = "wall"
-                            node.alpha = 0.6
-                            node.hidden = true
+                            node.alpha = 0.3
+                            node.hidden = false
                             
                             node.position = position
                             node.physicsBody = SKPhysicsBody(rectangleOfSize: node.size)
@@ -297,7 +297,12 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
         
         
         
-        if shark == 1 {
+        if shark == 0 {
+            
+            let action = SKAction.scaleXTo(1.0, y: 1.0, duration: 0.5)
+            sharkIndicator.runAction(action)
+            
+        } else if shark == 1 {
             
             let action = SKAction.scaleXTo(1.2, y: 1.2, duration: 0.5)
             sharkIndicator.runAction(action)
@@ -322,43 +327,43 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func wallindicator () {
-        
-        
-        
-        if wall == 1 {
-            
-            let action = SKAction.scaleXTo(1.2, y: 1.2, duration: 0.5)
-            wallIndicator.runAction(action)
-        } else if wall == 2 {
-            
-            let action = SKAction.scaleXTo(1.4, y: 1.4, duration: 0.5)
-            wallIndicator.runAction(action)
-            
-        } else if wall == 3 {
-            let action = SKAction.scaleXTo(1.6, y: 1.6, duration: 0.5)
-            wallIndicator.runAction(action)
-        } else if wall == 4 {
-            let action = SKAction.scaleXTo(1.8, y: 1.8, duration: 0.5)
-            wallIndicator.runAction(action)
-        } else if wall == 5 {
-            let action = SKAction.scaleXTo(2.0, y: 2.0, duration: 0.5)
-            wallIndicator.runAction(action)
-        }
-        else if wall == 6 {
-            let action = SKAction.scaleXTo(2.2, y: 2.2, duration: 0.5)
-            wallIndicator.runAction(action)
-        }
-        else if wall == 7 {
-            let action = SKAction.scaleXTo(2.4, y: 2.2, duration: 0.5)
-            wallIndicator.runAction(action)
-        }
-        else if wall == 8 {
-            let action = SKAction.scaleXTo(2.6, y: 2.2, duration: 0.5)
-            wallIndicator.runAction(action)
-        }
-    }
-    
+//    func wallindicator () {
+//        
+//        
+//        
+//        if wall == 1 {
+//            
+//            let action = SKAction.scaleXTo(1.2, y: 1.2, duration: 0.5)
+//            wallIndicator.runAction(action)
+//        } else if wall == 2 {
+//            
+//            let action = SKAction.scaleXTo(1.4, y: 1.4, duration: 0.5)
+//            wallIndicator.runAction(action)
+//            
+//        } else if wall == 3 {
+//            let action = SKAction.scaleXTo(1.6, y: 1.6, duration: 0.5)
+//            wallIndicator.runAction(action)
+//        } else if wall == 4 {
+//            let action = SKAction.scaleXTo(1.8, y: 1.8, duration: 0.5)
+//            wallIndicator.runAction(action)
+//        } else if wall == 5 {
+//            let action = SKAction.scaleXTo(2.0, y: 2.0, duration: 0.5)
+//            wallIndicator.runAction(action)
+//        }
+//        else if wall == 6 {
+//            let action = SKAction.scaleXTo(2.2, y: 2.2, duration: 0.5)
+//            wallIndicator.runAction(action)
+//        }
+//        else if wall == 7 {
+//            let action = SKAction.scaleXTo(2.4, y: 2.2, duration: 0.5)
+//            wallIndicator.runAction(action)
+//        }
+//        else if wall == 8 {
+//            let action = SKAction.scaleXTo(2.6, y: 2.2, duration: 0.5)
+//            wallIndicator.runAction(action)
+//        }
+//    }
+//    
     
     
     func makeJoint () {
@@ -493,12 +498,13 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
     
     func shieldCollidedWithNode(node: SKNode) {
         
-        if (mask1 >= 1) {
+        if (mask1 == 1) {
             
             if node.name == "wall" {
-                wall += 1
-                wallindicator()
-                node.hidden = false
+//                wall += 1
+//                wallindicator()
+//                node.hidden = false
+                node.alpha = 1
                 
             } else if node.name == "treasure" {
                 node.hidden = false
@@ -514,9 +520,9 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
             
         } else {
             if node.name == "wall" {
-                wall += 1
-                wallindicator()
-                
+//                wall += 1
+//                wallindicator()
+//                
             }  else if node.name == "shark" {
                 shark += 1
                 sharkindicator ()
@@ -538,10 +544,11 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
         if (mask1 == 1) {
             
             if node.name == "wall" {
-                wall -= 1
-                wallindicator()
-                node.hidden = true
-                
+//                wall -= 1
+//                wallindicator()
+//                node.hidden = true
+//                
+                node.alpha = 0.3
             } else if node.name == "treasure" {
                 node.hidden = true
             } else if node.name == "shark" {
@@ -556,10 +563,10 @@ class GameScene2: SKScene, SKPhysicsContactDelegate {
             
         } else {
             if node.name == "wall" {
-                wall -= 1
-                wallindicator()
-                node.hidden = true
-                
+//                wall -= 1
+//                wallindicator()
+//                node.hidden = true
+//                
             }  else if node.name == "shark" {
                 shark -= 1
                 sharkindicator()

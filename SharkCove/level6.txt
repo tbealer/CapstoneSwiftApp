@@ -1,10 +1,10 @@
 xxxxxxxxxxxxxxxxxxxx
-   sm  x    xsx
+m  s   x    xsx    s
    x            x
-   sx      s  m    x
+   sx   s  s  m    x
   
-x     b sx   s
+x  s  b sx   s    s
       x  sx
   x   sxtxx b      x
-m s   xxxsx    s
+m s   xxxsx    s   m
 xxxxxxxxxxxxxxxxxxxx

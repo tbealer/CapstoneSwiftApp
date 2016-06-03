@@ -1,8 +1,8 @@
 xxxxxxxxxxxxxxxxxxxx
- x             xm
+ x     m       x
   s  s   xs    sxs x
      x   sx
-      x   m  x sx
+      x   m  x sx  m
 x s       x  x
   x          s    sx
     xx   xxs    x
