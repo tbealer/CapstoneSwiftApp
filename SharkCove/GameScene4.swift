@@ -127,6 +127,10 @@ class GameScene4: SKScene, SKPhysicsContactDelegate {
         bombLabel.position = CGPoint(x: 500, y: 630)
         addChild(bombLabel)
         
+        let lvlindicator = SKSpriteNode(imageNamed: "thereallvl4btn")
+        lvlindicator.position = CGPoint(x: 100, y: 130)
+        addChild(lvlindicator)
+        
         let defaults = NSUserDefaults.standardUserDefaults()
         let bombs = defaults.integerForKey("bombs")
         bomb1 = bombs
@@ -160,7 +164,7 @@ class GameScene4: SKScene, SKPhysicsContactDelegate {
                             bubbles.name = "bubbles"
                             bubbles.hidden = false
                             
-                            node.alpha = 0.5
+                            node.alpha = 0.6
                             node.hidden = true
                             node.name = "shark"
                             
@@ -174,7 +178,7 @@ class GameScene4: SKScene, SKPhysicsContactDelegate {
                             // load vortex
                             let node = SKSpriteNode(imageNamed: "coral")
                             node.name = "wall"
-                            node.alpha = 0.3
+                            node.alpha = 0.6
                             node.hidden = true
                             
                             node.position = position
@@ -230,7 +234,7 @@ class GameScene4: SKScene, SKPhysicsContactDelegate {
                             node.physicsBody = SKPhysicsBody(rectangleOfSize: node.size)
                             node.physicsBody!.dynamic = false
                             
-                            node.alpha = 0.3
+                            node.alpha = 0.6
                             node.hidden = true
                             
                             let bubbles = SKSpriteNode(imageNamed: "bubbles")
@@ -274,7 +278,17 @@ class GameScene4: SKScene, SKPhysicsContactDelegate {
         
         player.physicsBody!.dynamic = true
         
-        
+        let wait = SKAction.waitForDuration(5.0)
+        let run = SKAction.runBlock {
+            //NEW
+            
+            
+            
+            self.mask1 = 0
+            
+            
+        }
+        player.runAction(SKAction.sequence([wait, run]))
         
         
     }
@@ -548,10 +562,17 @@ class GameScene4: SKScene, SKPhysicsContactDelegate {
             if node.name == "wall" {
                 wall -= 1
                 wallindicator()
+                node.hidden = true
                 
             }  else if node.name == "shark" {
                 shark -= 1
                 sharkindicator()
+                node.hidden = true
+                
+            } else if node.name == "bomb" {
+                node.hidden = true
+            } else if node.name == "mask" {
+                node.hidden = true
             }
         }
         
@@ -720,6 +741,14 @@ class GameScene4: SKScene, SKPhysicsContactDelegate {
             }
             player.runAction(SKAction.sequence([wait, run]))
             
+            let timed = SKAction.waitForDuration(7)
+            let run1 = SKAction.runBlock {
+                
+                sonarindicator.removeFromParent()
+                
+            }
+            
+            player.runAction(SKAction.sequence([timed, run1]))
             
             node.removeFromParent()
             

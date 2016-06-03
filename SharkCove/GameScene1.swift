@@ -45,7 +45,6 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
     var homebtn: SKSpriteNode!
     var sharkIndicator: SKSpriteNode!
     var wallIndicator: SKSpriteNode!
-    var sonaralert: SKSpriteNode!
     var lastTouchPosition: CGPoint?
     var motionManager: CMMotionManager!
     var wall: Int = 0
@@ -121,7 +120,7 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
                             bubbles.name = "bubbles"
                             bubbles.hidden = false
                             
-                            node.alpha = 0.5
+                            node.alpha = 0.6
                             node.hidden = true
                             node.name = "shark"
                             
@@ -134,7 +133,7 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
                         } else if letter == "x"  {
                             let node = SKSpriteNode(imageNamed: "coral")
                             node.name = "wall"
-                            node.alpha = 0.3
+                            node.alpha = 0.6
                             node.hidden = true
                             
                             node.position = position
@@ -185,7 +184,7 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
                             node.physicsBody = SKPhysicsBody(rectangleOfSize: node.size)
                             node.physicsBody!.dynamic = false
                             
-                            node.alpha = 0.3
+                            node.alpha = 0.6
                             node.hidden = true
                             
                             let bubbles = SKSpriteNode(imageNamed: "bubbles")
@@ -226,6 +225,19 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
         mask1 = 1
         
         player.physicsBody!.dynamic = true
+        
+        
+        let wait = SKAction.waitForDuration(5.0)
+        let run = SKAction.runBlock {
+            //NEW
+            
+            
+            
+            self.mask1 = 0
+            
+           
+        }
+        player.runAction(SKAction.sequence([wait, run]))
         
     }
     
@@ -405,8 +417,8 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
     }
     
     func shieldCollidedWithNode(node: SKNode) {
-        
-        if (mask1 >= 1) {
+       //NEW
+        if (mask1 == 1) {
             
             if node.name == "wall" {
                 wall += 1
@@ -471,10 +483,17 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
             if node.name == "wall" {
                 wall -= 1
                 wallindicator()
+                node.hidden = true
                 
             }  else if node.name == "shark" {
                 shark -= 1
                 sharkindicator()
+                node.hidden = true
+
+            } else if node.name == "bomb" {
+                node.hidden = true
+            } else if node.name == "mask" {
+                node.hidden = true
             }
         }
         
@@ -615,6 +634,7 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
             
             let sonarindicator = SKSpriteNode(imageNamed: "therealsonar")
             sonarindicator.position = CGPoint(x: 750, y: 630)
+            sonarindicator.anchorPoint = CGPoint(x: 0.5, y: 0.5)
             addChild(sonarindicator)
             
             let sonaralert = SKSpriteNode(imageNamed: "therealsonar")
@@ -635,6 +655,17 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
                 sonaralert.removeFromParent()
             }
             player.runAction(SKAction.sequence([wait, run]))
+            
+            //NEW
+            let timed = SKAction.waitForDuration(7)
+            let run1 = SKAction.runBlock {
+                
+                sonarindicator.removeFromParent()
+                
+            }
+            
+            player.runAction(SKAction.sequence([timed, run1]))
+            
             
             
             node.removeFromParent()
