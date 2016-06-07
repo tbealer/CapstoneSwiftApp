@@ -26,6 +26,7 @@
 		7063F5D11CFF8485003870A2 /* GameOverScene3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F5D01CFF8485003870A2 /* GameOverScene3.swift */; };
 		7063F5D31CFF8493003870A2 /* SuccessScene3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063F5D21CFF8493003870A2 /* SuccessScene3.swift */; };
 		7063F5D51CFF85D5003870A2 /* level4.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7063F5D41CFF85D5003870A2 /* level4.txt */; };
+		7065636B1D077F4D00C8FA6C /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7065636A1D077F4D00C8FA6C /* README.txt */; };
 		706B44271CFCB40E00798986 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 706B44261CFCB40E00798986 /* level2.txt */; };
 		706B44291CFCB60700798986 /* GameScene2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B44281CFCB60700798986 /* GameScene2.swift */; };
 		707BCB701CFE2B9E00CC55BE /* bubbles.png in Resources */ = {isa = PBXBuildFile; fileRef = 707BCB6F1CFE2B9E00CC55BE /* bubbles.png */; };
@@ -146,6 +147,7 @@
 		7063F5D01CFF8485003870A2 /* GameOverScene3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene3.swift; sourceTree = "<group>"; };
 		7063F5D21CFF8493003870A2 /* SuccessScene3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessScene3.swift; sourceTree = "<group>"; };
 		7063F5D41CFF85D5003870A2 /* level4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level4.txt; sourceTree = "<group>"; };
+		7065636A1D077F4D00C8FA6C /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		706B44261CFCB40E00798986 /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
 		706B44281CFCB60700798986 /* GameScene2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene2.swift; sourceTree = "<group>"; };
 		707BCB6F1CFE2B9E00CC55BE /* bubbles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbles.png; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 				70E851641D00F26A002196EF /* InstructionScene2.swift */,
 				70E851681D00F33A002196EF /* InstructionsScene3.swift */,
 				70E8516E1D00F3F6002196EF /* InstructionScene4.swift */,
+				7065636A1D077F4D00C8FA6C /* README.txt */,
 			);
 			path = SharkCove;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				708F5BF21CF8A187006A9B24 /* LaunchScreen.storyboard in Resources */,
 				70E851331D00D1B2002196EF /* therealactivebomb.png in Resources */,
 				70EEEFBF1CFF8AF300D25704 /* level7.txt in Resources */,
+				7065636B1D077F4D00C8FA6C /* README.txt in Resources */,
 				708F5BEF1CF8A187006A9B24 /* Assets.xcassets in Resources */,
 				70E851391D00D5F8002196EF /* thereallvl1btn.png in Resources */,
 				70E851671D00F2EF002196EF /* tryinstruct2.png in Resources */,

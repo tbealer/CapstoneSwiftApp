@@ -13,26 +13,15 @@ class SuccessScene: SKScene, SKPhysicsContactDelegate {
     
     var playbutton: SKSpriteNode!
     var lastTouchPosition: CGPoint?
-    
-    
-    
-    
+
     override func didMoveToView(view: SKView) {
-        
-        
-        
+
         let background = SKSpriteNode(imageNamed: "background2")
         background.position = CGPoint(x: 512, y: 384)
         background.blendMode = .Replace
         background.zPosition = -1
         addChild(background)
-        
-        
-        
-        
-        
-        
-        
+  
         loadLevel()
         addButtons()
         
@@ -113,10 +102,6 @@ class SuccessScene: SKScene, SKPhysicsContactDelegate {
         addChild(nextbtn)
         
     }
-    
-    
-    
-    
     
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

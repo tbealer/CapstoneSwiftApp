@@ -19,7 +19,6 @@ class GameViewController: UIViewController {
    
     override func viewDidLoad() {
         
-        UIApplication.sharedApplication().idleTimerDisabled = true
 
         
         
